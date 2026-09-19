@@ -1,0 +1,6 @@
+/item replace entity @s armor.body with bart:example_item 64
+/item replace entity @s armor.head with bart:example_item 64
+/item replace entity @s armor.feet with bart:example_item 64
+/item replace entity @s armor.legs with bart:example_item 64
+/item replace entity @s armor.chest with bart:example_item 64
+/give @s bart:example_block 64

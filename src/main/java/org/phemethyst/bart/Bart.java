@@ -1,7 +1,12 @@
 package org.phemethyst.bart;
 
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import org.phemethyst.bart.entity.ModEntities;
+import org.phemethyst.bart.entity.client.BartRenderer;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -25,5 +30,13 @@ public class Bart {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         LOGGER.info("Bart welcomes you.");
+    }
+
+    @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.BART.get(), BartRenderer::new);
+        }
     }
 }

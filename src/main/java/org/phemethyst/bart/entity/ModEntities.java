@@ -16,7 +16,7 @@ public class ModEntities {
 
     public static final Supplier<EntityType<BartEntity>> BART =
             ENTITYTYPES.register("bart", () -> EntityType.Builder.of(BartEntity::new, MobCategory.MONSTER)
-                    .sized(0.7f, 0.7f).build("bart"));
+                    .sized(0.7f, 2f).build("bart"));
 
     public static void register(IEventBus eventBus) {
         ENTITYTYPES.register(eventBus);
