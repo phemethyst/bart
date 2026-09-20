@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.phemethyst.bart.Bart;
+import org.phemethyst.bart.entity.goals.TelefraggerGoal;
 
 public class BartEntity extends Monster {
     public final AnimationState wakeupeepyheadAnimState = new AnimationState();
@@ -39,13 +40,23 @@ public class BartEntity extends Monster {
     private int idle2Timeout = 0;
     private int toxicbitchTimeout = 0;
 
+    public final int minTelefraggerTime = 100;
+    public final int maxTelefraggerTime = 150;
+    public int currentTelefraggerTime;
+    public int telefraggerTimer = 300;
+
+    public boolean isTelefragging = false;
+    public boolean isDashing = false;
+
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, true));
-        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0));
+        this.goalSelector.addGoal(2, new TelefraggerGoal(this));
+        // dash
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
@@ -61,15 +72,27 @@ public class BartEntity extends Monster {
 
     // might have to revisit tbh
     // ofc i WILL have to revisit but i highly doubt walking will just work
+
+    // TODO: fix orangeteleportal animation
     private void setupAnimationStates() {
         if (this.walkAnimation.isMoving()) {
             return;
+        }
+
+        if (this.isTelefragging) {
+            this.orangeteleportalAnimState.start(10);
         }
     }
 
     @Override
     public void tick() {
         super.tick();
+
+        telefraggerTimer--;
+
+        if (isTelefragging || isDashing) {
+            getNavigation().stop();
+        }
 
         if(this.level().isClientSide()) {
             this.setupAnimationStates();

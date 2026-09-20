@@ -1,17 +1,3 @@
-/item replace entity @s armor.body with bart:example_item 64
-/item replace entity @s armor.head with bart:example_item 64
-/item replace entity @s armor.feet with bart:example_item 64
-/item replace entity @s armor.legs with bart:example_item 64
-/item replace entity @s armor.chest with bart:example_item 64
-/give @s bart:example_block 64
-/locate biome plains
-/tp @s 258 126 -24
-/tp @s 1000 100 1000
-/locate biome plains
-/tp @s 1174 83 858
-/summon bart:bart
-/effect give @s minecraft:regeneration infinite 255 true
-/give @s mace
 /enchant @s minecraft:wind_burst 3
 /effect give @s minecraft:jump_boost infinite 2 true
 /summon bart:bart
@@ -46,3 +32,19 @@
 /give @s bart:maid_dress_leggings
 /summon bart:bart
 /enchant @s minecraft:wind_burst 3
+/effect give @s minecraft:regeneration infinite 255 true
+/summon bart:bart
+/neoforge tps
+/summon bart:bart
+/effect give @s minecraft:jump_boost infinite 2 true
+/effect clear @s minecraft:jump_boost
+/effect give @s minecraft:jump_boost infinite 1 true
+/summon bart:bart
+/effect clear
+/summon bart:bart
+/give @s iron_sword[unbreakable={}]
+/give @s minecraft:cooked_beef 64
+/gamerule keepInventory true
+/summon bart:bart
+/effect give @s minecraft:regeneration infinite 255 true
+/summon bart:bart

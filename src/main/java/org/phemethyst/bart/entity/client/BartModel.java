@@ -51,6 +51,7 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
         this.applyHeadRotation(netHeadYaw, headPitch);
 
         this.animateWalk(BartAnimations.walk, limbSwing, limbSwingAmount, 5f, 1);
+        this.animate(entity.orangeteleportalAnimState, BartAnimations.orangeteleportal, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {
