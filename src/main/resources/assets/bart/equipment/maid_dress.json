@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "bart:models/armor/maid_dress"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "bart:models/armor/maid_dress2"
+      }
+    ]
+  }
+}

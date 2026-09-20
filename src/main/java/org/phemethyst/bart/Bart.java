@@ -7,6 +7,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartRenderer;
+import org.phemethyst.bart.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -21,9 +22,12 @@ public class Bart {
     public static final String MODID = "bart";
     public static final Logger LOGGER = LogUtils.getLogger();
 
+    public static final int MAXINT = 2147483647;
+
     public Bart(IEventBus modEventBus, ModContainer modContainer) {
         NeoForge.EVENT_BUS.register(this);
 
+        ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
     }
 

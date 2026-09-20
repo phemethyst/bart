@@ -37,3 +37,12 @@
 /summon bart:bart
 /give @s cooked_beef 64
 /summon bart:bart
+/give @s iron_sword[unbreakable={}]
+/summon bart:bart
+/give @s redstone
+/give @s bart:maid_dress_boots
+/give @s bart:maid_dress_chestplate
+/give @s bart:maid_dress_helmet
+/give @s bart:maid_dress_leggings
+/summon bart:bart
+/enchant @s minecraft:wind_burst 3

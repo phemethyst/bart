@@ -14,6 +14,7 @@ import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.phemethyst.bart.Bart;
 
 public class BartEntity extends Monster {
     public final AnimationState wakeupeepyheadAnimState = new AnimationState();
@@ -24,6 +25,7 @@ public class BartEntity extends Monster {
     public final AnimationState orangeteleportalAnimState = new AnimationState();
     public final AnimationState idle1AnimState = new AnimationState();
     public final AnimationState idle2AnimState = new AnimationState();
+    public final AnimationState toxicbitchAnimState = new AnimationState();
 
     public final WalkAnimationState walkAnimation = new WalkAnimationState();
 
@@ -35,9 +37,8 @@ public class BartEntity extends Monster {
     private int orangeteleportalTimeout = 0;
     private int walkTimeout = 0;
     private int idle2Timeout = 0;
+    private int toxicbitchTimeout = 0;
 
-    // tutorial timestamp 17:38
-    // (im like hey whats up hello)
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
     @Override
@@ -50,12 +51,12 @@ public class BartEntity extends Monster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 40)
+                .add(Attributes.MAX_HEALTH, 60)
                 .add(Attributes.MOVEMENT_SPEED, 0.4)
                 .add(Attributes.FOLLOW_RANGE, 64)
                 .add(Attributes.ATTACK_DAMAGE, 4)
                 .add(Attributes.ATTACK_SPEED, 2)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 2147483647);
+                .add(Attributes.KNOCKBACK_RESISTANCE, Bart.MAXINT);
     }
 
     // might have to revisit tbh

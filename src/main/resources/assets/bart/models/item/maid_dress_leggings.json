@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [],
+  "textures": {
+    "layer0": "bart:item/maid_dress_leggings"
+  }
+}
