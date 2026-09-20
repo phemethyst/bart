@@ -10,6 +10,7 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -49,11 +50,12 @@ public class BartEntity extends Monster {
 
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
-                .add(Attributes.MAX_HEALTH, 20)
-                .add(Attributes.MOVEMENT_SPEED, 0.5)
+                .add(Attributes.MAX_HEALTH, 40)
+                .add(Attributes.MOVEMENT_SPEED, 0.4)
                 .add(Attributes.FOLLOW_RANGE, 64)
                 .add(Attributes.ATTACK_DAMAGE, 4)
-                .add(Attributes.ATTACK_SPEED, 1);
+                .add(Attributes.ATTACK_SPEED, 2)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 2147483647);
     }
 
     // might have to revisit tbh
@@ -62,10 +64,6 @@ public class BartEntity extends Monster {
         if (this.walkAnimation.isMoving()) {
             return;
         }
-
-        // all other anims go here btw
-
-        this.idle1AnimState.start(0);
     }
 
     @Override

@@ -7,6 +7,7 @@
   },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:forest": "2026-09-20 11:16:21 +0200",
       "minecraft:sparse_jungle": "2026-09-19 22:31:14 +0200",
       "minecraft:birch_forest": "2026-09-19 22:31:35 +0200",
       "minecraft:plains": "2026-09-19 22:31:27 +0200"
@@ -28,6 +29,51 @@
   "minecraft:recipes/misc/iron_nugget_from_blasting": {
     "criteria": {
       "has_iron_sword": "2026-09-19 22:36:08 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_all_mobs": {
+    "criteria": {
+      "minecraft:skeleton": "2026-09-20 11:50:28 +0200",
+      "minecraft:spider": "2026-09-20 11:51:04 +0200",
+      "minecraft:zombie": "2026-09-20 11:51:25 +0200",
+      "minecraft:creeper": "2026-09-20 11:51:16 +0200"
+    },
+    "done": false
+  },
+  "minecraft:adventure/kill_a_mob": {
+    "criteria": {
+      "minecraft:skeleton": "2026-09-20 11:50:28 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/bone_meal": {
+    "criteria": {
+      "has_bone": "2026-09-20 11:51:08 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/firework_rocket_simple": {
+    "criteria": {
+      "has_gunpowder": "2026-09-20 11:51:23 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/tnt": {
+    "criteria": {
+      "has_gunpowder": "2026-09-20 11:51:23 +0200"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "cooked_beef": "2026-09-20 13:49:33 +0200"
+    },
+    "done": false
+  },
+  "minecraft:husbandry/root": {
+    "criteria": {
+      "consumed_item": "2026-09-20 13:49:33 +0200"
     },
     "done": true
   },

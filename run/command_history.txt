@@ -19,3 +19,21 @@
 /summon bart:bart
 /give @s minecraft:iron_sword
 /summon bart:bart
+/effect give @s minecraft:saturation infinite 255 true
+/summon bart:bart
+/weather clear
+/summon bart:bart
+/gamerule fallDamage false
+/effect clear
+/gamerule doMobSpawning false
+/summon bart:bart
+/gamemode creative
+/bossbar add bart bart
+/bossbar add bart "bart"
+/setworldspawn
+/gamerule keepInventory true
+/give @s iron_sword[
+/give @s iron_sword
+/summon bart:bart
+/give @s cooked_beef 64
+/summon bart:bart
