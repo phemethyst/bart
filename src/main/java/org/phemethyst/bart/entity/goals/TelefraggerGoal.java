@@ -51,9 +51,13 @@ public class TelefraggerGoal extends Goal {
         }
         BartEntity bart = (BartEntity) mob;
 
+        if (bart.passive) {
+            return;
+        }
+
         bart.isTelefragging = true;
 
-        this.mob.getNavigation().stop();
+        this.mob.setDeltaMovement(0, 0, 0);
 
         currentTelefraggerRange = (int)
                 Mth.randomBetweenInclusive(RandomSource.create(), minTelefraggerRange, maxTelefraggerRange);
@@ -115,6 +119,8 @@ public class TelefraggerGoal extends Goal {
         }
 
         this.mob.teleportTo((double) selectedPos.x, this.mob.getY(), (double) selectedPos.y);
-        bart.isTelefragging = false;
+        bart.telefragTimer = 20;
+
+        bart.level().broadcastEntityEvent(bart, (byte) 1);
     }
 }

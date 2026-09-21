@@ -40,13 +40,24 @@ public class BartEntity extends Monster {
     private int idle2Timeout = 0;
     private int toxicbitchTimeout = 0;
 
-    public final int minTelefraggerTime = 100;
-    public final int maxTelefraggerTime = 150;
+    public final int minTelefraggerTime = 150;
+    public final int maxTelefraggerTime = 200;
     public int currentTelefraggerTime;
     public int telefraggerTimer = 300;
 
     public boolean isTelefragging = false;
     public boolean isDashing = false;
+
+    public boolean passive = true;
+
+    public int telefragTimer = 0;
+
+    public int wakeupeepyheadTimer = -1;
+
+    public final int minTransitionTime = 80;
+    public final int maxTransitionTime = 140;
+    public int currentTransitionTime;
+    public int transitionTimer = 100;
 
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
@@ -75,12 +86,10 @@ public class BartEntity extends Monster {
 
     // TODO: fix orangeteleportal animation
     private void setupAnimationStates() {
-        if (this.walkAnimation.isMoving()) {
-            return;
-        }
-
-        if (this.isTelefragging) {
-            this.orangeteleportalAnimState.start(10);
+        if (this.passive) {
+            this.idle2AnimState.start(tickCount);
+        } else {
+            this.idle1AnimState.start(tickCount);
         }
     }
 
@@ -89,17 +98,56 @@ public class BartEntity extends Monster {
         super.tick();
 
         telefraggerTimer--;
+        telefragTimer--;
 
-        if (isTelefragging || isDashing) {
-            getNavigation().stop();
+        transitionTimer--;
+
+        if (wakeupeepyheadTimer > 0) {
+            wakeupeepyheadTimer--;
+        } else if (wakeupeepyheadTimer != -1) {
+            if (passive) {
+                passive = false;
+            }
         }
 
-        if(this.level().isClientSide()) {
+        if (telefragTimer <= 0) {
+            isTelefragging = false;
+        }
+
+        if (isTelefragging || isDashing) {
+            this.setDeltaMovement(0, 0, 0);
+        }
+
+        if (passive || wakeupeepyheadTimer > 0) {
+            this.setDeltaMovement(0, 0, 0);
+        }
+
+        if (this.level().isClientSide()) {
             this.setupAnimationStates();
+
+            if (this.passive) {
+                this.idle2AnimState.start(tickCount);
+            }
         }
     }
 
     public BartEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
+    }
+
+    @Override
+    public void handleEntityEvent(byte id) {
+        super.handleEntityEvent(id);
+
+        if (this.level().isClientSide() && this.passive) {
+            this.idle2AnimState.start(this.tickCount);
+            return;
+        }
+
+        if (id == 1 && this.level().isClientSide()) {
+            this.orangeteleportalAnimState.start(this.tickCount);
+        } else if (id == 2 && this.level().isClientSide()) {
+            this.wakeupeepyheadAnimState.start(this.tickCount);
+        }
     }
 }

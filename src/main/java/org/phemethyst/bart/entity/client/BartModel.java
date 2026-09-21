@@ -16,11 +16,13 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION =
             new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(Bart.MODID, "bart"), "main");
+    private final ModelPart root;
     private final ModelPart waist;
     private final ModelPart head;
 
     public BartModel(ModelPart root) {
-        this.waist = root.getChild("waist");
+        this.root = root.getChild("root");
+        this.waist = this.root.getChild("waist");
         this.head = this.waist.getChild("head");
     }
 
@@ -28,7 +30,9 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition waist = partdefinition.addOrReplaceChild("waist", CubeListBuilder.create(), PartPose.offset(0.0F, 24.0F, 0.0F));
+        PartDefinition root = partdefinition.addOrReplaceChild("root", CubeListBuilder.create(), PartPose.offset(0, 24, 0));
+
+        PartDefinition waist = root.addOrReplaceChild("waist", CubeListBuilder.create().texOffs(-1, -1).addBox(0, 0, 0, 1, 1, 1), PartPose.offset(0.0F, 24.0F, 0.0F));
 
         PartDefinition head = waist.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -8.0F, -4.0F, 8.0F, 8.0F, 8.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, -24.0F, 0.0F));
 
@@ -52,6 +56,9 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
 
         this.animateWalk(BartAnimations.walk, limbSwing, limbSwingAmount, 5f, 1);
         this.animate(entity.orangeteleportalAnimState, BartAnimations.orangeteleportal, ageInTicks, 1f);
+        this.animate(entity.idle2AnimState, BartAnimations.idle2, ageInTicks, 1f);
+        this.animate(entity.idle1AnimState, BartAnimations.idle1, ageInTicks, 1f);
+        this.animate(entity.wakeupeepyheadAnimState, BartAnimations.wakeupeepyhead, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {
@@ -69,6 +76,6 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
 
     @Override
     public ModelPart root() {
-        return waist;
+        return root;
     }
 }

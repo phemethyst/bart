@@ -1,13 +1,3 @@
-/enchant @s minecraft:wind_burst 3
-/effect give @s minecraft:jump_boost infinite 2 true
-/summon bart:bart
-/summon bart
-/summon bart:bart
-/give @s minecraft:iron_sword
-/summon bart:bart
-/effect give @s minecraft:saturation infinite 255 true
-/summon bart:bart
-/weather clear
 /summon bart:bart
 /gamerule fallDamage false
 /effect clear
@@ -48,3 +38,13 @@
 /summon bart:bart
 /effect give @s minecraft:regeneration infinite 255 true
 /summon bart:bart
+/summon bart:bart 1 ~ ~
+/summon bart:bart
+/summon bart:bart ~1 ~ ~
+/kill @e[type=bart:bart]
+/summon bart:bart ~1 ~ ~
+/as
+/summon bart:bart ~1 ~ ~
+/summon bart:bart ~1 ~ ~1
+/kill @e[type=bart:bart]
+/summon bart:bart ~1 ~ ~1
