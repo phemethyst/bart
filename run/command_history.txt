@@ -1,8 +1,4 @@
 /summon bart:bart
-/gamerule fallDamage false
-/effect clear
-/gamerule doMobSpawning false
-/summon bart:bart
 /gamemode creative
 /bossbar add bart bart
 /bossbar add bart "bart"
@@ -48,3 +44,7 @@
 /summon bart:bart ~1 ~ ~1
 /kill @e[type=bart:bart]
 /summon bart:bart ~1 ~ ~1
+/summon bart
+/summon bart:bart
+/kill @e[type=bart:bart]
+/summon bart:bart

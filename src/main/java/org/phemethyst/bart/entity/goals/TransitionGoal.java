@@ -29,4 +29,23 @@ public class TransitionGoal extends Goal {
             return false;
         }
     }
+
+    public void start() {
+        if (this.mob.getTarget() == null) {
+            return;
+        }
+
+        if (!(mob instanceof BartEntity)) {
+            return;
+        }
+        BartEntity bart = (BartEntity) mob;
+
+        if (bart.passive) {
+            return;
+        }
+
+        bart.isDashing = true;
+        bart.level().broadcastEntityEvent(bart, (byte) 3);
+        bart.dashTimer = 10;
+    }
 }

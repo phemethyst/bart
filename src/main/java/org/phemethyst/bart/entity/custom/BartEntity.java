@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.phemethyst.bart.Bart;
 import org.phemethyst.bart.entity.goals.TelefraggerGoal;
+import org.phemethyst.bart.entity.goals.TransitionGoal;
 
 public class BartEntity extends Monster {
     public final AnimationState wakeupeepyheadAnimState = new AnimationState();
@@ -47,6 +48,12 @@ public class BartEntity extends Monster {
 
     public boolean isTelefragging = false;
     public boolean isDashing = false;
+    public boolean isMidDash = false;
+
+    private Vec3 dashTarget = Vec3.ZERO;
+
+    public int dashTimer = -1;
+    public int midDashTimer = -1;
 
     public boolean passive = true;
 
@@ -65,8 +72,8 @@ public class BartEntity extends Monster {
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, true));
-        this.goalSelector.addGoal(2, new TelefraggerGoal(this));
-        // dash
+        // this.goalSelector.addGoal(2, new TelefraggerGoal(this));
+        this.goalSelector.addGoal(3, new TransitionGoal(this));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
@@ -99,6 +106,8 @@ public class BartEntity extends Monster {
 
         telefraggerTimer--;
         telefragTimer--;
+        dashTimer--;
+        midDashTimer--;
 
         transitionTimer--;
 
@@ -118,8 +127,25 @@ public class BartEntity extends Monster {
             this.setDeltaMovement(0, 0, 0);
         }
 
+        if (isMidDash) {
+            this.getNavigation().stop();
+            this.setDeltaMovement(dashTarget.x, dashTarget.y, dashTarget.z);
+        }
+
         if (passive || wakeupeepyheadTimer > 0) {
             this.setDeltaMovement(0, 0, 0);
+        }
+
+        if (dashTimer == 0) {
+            isDashing = false;
+            isMidDash = true;
+
+            dash();
+        }
+
+        if (midDashTimer == 0) {
+            isMidDash = false;
+            dashTarget = Vec3.ZERO;
         }
 
         if (this.level().isClientSide()) {
@@ -148,6 +174,20 @@ public class BartEntity extends Monster {
             this.orangeteleportalAnimState.start(this.tickCount);
         } else if (id == 2 && this.level().isClientSide()) {
             this.wakeupeepyheadAnimState.start(this.tickCount);
+        } else if (id == 3 && this.level().isClientSide()) {
+            this.dashAnimState.start(this.tickCount);
         }
+    }
+
+    private void dash() {
+        Vec3 targetPos = this.getTarget().getPosition(0);
+        Vec3 bartPos = this.getPosition(0);
+
+        Vec3 diff = new Vec3(targetPos.x - bartPos.x,
+                targetPos.y - bartPos.y,
+                targetPos.z - bartPos.z);
+
+        dashTarget = diff.scale(0.1);
+        midDashTimer = 20;
     }
 }
