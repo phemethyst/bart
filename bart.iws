@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f2b3d460-18c8-4ecf-8ec2-b82c577ec67f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bart.iws" beforeDir="false" afterPath="$PROJECT_DIR$/bart.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/phemethyst/bart/entity/custom/BartEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/phemethyst/bart/entity/custom/BartEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
@@ -21,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/DIM-1/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/DIM-1/data/raids.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/DIM1/data/raids_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/DIM1/data/raids_end.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/data/raids.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/data/raids.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/combart arena/entities/r.-1.-1.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/entities/r.-1.-1.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/level.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/level.dat_old" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/playerdata/380df991-f603-344c-a090-369bad2a924a.dat" afterDir="false" />
@@ -31,7 +31,6 @@
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/region/r.0.0.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/region/r.0.0.mca" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/client/BartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/client/BartModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/custom/BartEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/custom/BartEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/goals/TransitionGoal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/goals/TransitionGoal.java" afterDir="false" />
     </list>

@@ -130,6 +130,7 @@ public class BartEntity extends Monster {
         if (isMidDash) {
             this.getNavigation().stop();
             this.setDeltaMovement(dashTarget.x, dashTarget.y, dashTarget.z);
+            // TODO: disable walk animation and actually start work on the MVP and not bart
         }
 
         if (passive || wakeupeepyheadTimer > 0) {
@@ -174,7 +175,7 @@ public class BartEntity extends Monster {
             this.orangeteleportalAnimState.start(this.tickCount);
         } else if (id == 2 && this.level().isClientSide()) {
             this.wakeupeepyheadAnimState.start(this.tickCount);
-        } else if (id == 3 && this.level().isClientSide()) {
+        } else if (id == 30 && this.level().isClientSide()) {
             this.dashAnimState.start(this.tickCount);
         }
     }
