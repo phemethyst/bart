@@ -88,6 +88,20 @@ public class ModEvents {
 
                                                     return Command.SINGLE_SUCCESS;
                                                 })))
+                        .then(
+                                Commands.literal("enableDeath").then(
+                                        Commands.argument("bart", EntityArgument.entities())
+                                                .executes(context -> {
+                                                    List<Entity> bart = (List<Entity>) EntityArgument.getEntities(context, "bart");
+
+                                                    for (Entity b : bart) {
+                                                        if (b instanceof BartEntity) {
+                                                            ((BartEntity)b).enableDeath();
+                                                        }
+                                                    }
+
+                                                    return Command.SINGLE_SUCCESS;
+                                                })))
 
         );
     }

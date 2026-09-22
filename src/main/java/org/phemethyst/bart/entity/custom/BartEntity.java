@@ -68,6 +68,7 @@ public class BartEntity extends Monster {
 
     public boolean canDash = false;
     public boolean canTelefrag = false;
+    public boolean canDie = false;
 
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
@@ -148,6 +149,11 @@ public class BartEntity extends Monster {
             this.level().broadcastEntityEvent(this, (byte) 31);
         }
 
+        if (this.getHealth() <= 0 && !canDie) {
+            this.setHealth(this.getMaxHealth());
+            this.dead = false;
+        }
+
         if (this.level().isClientSide()) {
             this.setupAnimationStates();
 
@@ -200,5 +206,9 @@ public class BartEntity extends Monster {
 
     public void enableTelefrag() {
         canTelefrag = true;
+    }
+
+    public void enableDeath() {
+        canDie = true;
     }
 }
