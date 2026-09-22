@@ -54,6 +54,11 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
         this.root().getAllParts().forEach(ModelPart::resetPose);
         this.applyHeadRotation(netHeadYaw, headPitch);
 
+        if (entity.isMidDash || entity.isDashing) {
+            limbSwing = 0;
+            limbSwingAmount = 0;
+        }
+
         this.animateWalk(BartAnimations.walk, limbSwing, limbSwingAmount, 5f, 1);
         this.animate(entity.orangeteleportalAnimState, BartAnimations.orangeteleportal, ageInTicks, 1f);
         this.animate(entity.idle2AnimState, BartAnimations.idle2, ageInTicks, 1f);

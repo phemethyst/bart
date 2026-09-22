@@ -40,7 +40,7 @@ public class TransitionGoal extends Goal {
         }
         BartEntity bart = (BartEntity) mob;
 
-        if (bart.passive) {
+        if (bart.passive || !bart.canDash) {
             return;
         }
 

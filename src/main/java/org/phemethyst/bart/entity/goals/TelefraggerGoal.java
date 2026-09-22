@@ -51,7 +51,7 @@ public class TelefraggerGoal extends Goal {
         }
         BartEntity bart = (BartEntity) mob;
 
-        if (bart.passive) {
+        if (bart.passive || !bart.canTelefrag) {
             return;
         }
 

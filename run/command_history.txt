@@ -1,21 +1,3 @@
-/setworldspawn
-/gamerule keepInventory true
-/give @s iron_sword[
-/give @s iron_sword
-/summon bart:bart
-/give @s cooked_beef 64
-/summon bart:bart
-/give @s iron_sword[unbreakable={}]
-/summon bart:bart
-/give @s redstone
-/give @s bart:maid_dress_boots
-/give @s bart:maid_dress_chestplate
-/give @s bart:maid_dress_helmet
-/give @s bart:maid_dress_leggings
-/summon bart:bart
-/enchant @s minecraft:wind_burst 3
-/effect give @s minecraft:regeneration infinite 255 true
-/summon bart:bart
 /neoforge tps
 /summon bart:bart
 /effect give @s minecraft:jump_boost infinite 2 true
@@ -48,3 +30,21 @@
 /summon bart:bart
 /effect give @s minecraft:jump_boost infinite 2 true
 /summon bart:bart
+/bart @e
+/bart @e enableDash
+/bart enableDash @e
+/bart enableDash
+/bart enableDash @e
+/bart enableDash @e[type=bart:bart]
+/bart enableDash @e[type=bart:bart] 12123123123
+/bart enableDash @e
+/bart enableDash
+/bart enableDash @e
+/bart enableDash @e[type=bart:bart]
+/bart enableDash @e[]
+/bart enableDash @e
+/summon bart:bart
+/bart enableDash bfad6783-d0e6-4377-b44e-821861f2796b
+/bart enableDash @e
+/summon bart:bart
+/bart enableTelefrag @e

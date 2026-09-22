@@ -1,11 +1,15 @@
 package org.phemethyst.bart.event;
 
+import com.mojang.brigadier.Command;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
@@ -14,6 +18,8 @@ import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartModel;
 import org.phemethyst.bart.entity.custom.BartEntity;
 import org.phemethyst.bart.item.ModItems;
+
+import java.util.List;
 
 @EventBusSubscriber(modid = Bart.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class ModEvents {
@@ -49,5 +55,40 @@ public class ModEvents {
             bart.passive = false;
             bart.level().broadcastEntityEvent(bart, (byte) 2);
         }
+    }
+
+    @SubscribeEvent
+    public static void sudormrf(RegisterCommandsEvent event) {
+        event.getDispatcher().register(
+                Commands.literal("bart").then(
+                                Commands.literal("enableDash").then(
+                                        Commands.argument("bart", EntityArgument.entities())
+                                            .executes(context -> {
+                                                List<Entity> bart = (List<Entity>) EntityArgument.getEntities(context, "bart");
+
+                                                for (Entity b : bart) {
+                                                    if (b instanceof BartEntity) {
+                                                        ((BartEntity)b).enableDash();
+                                                    }
+                                                }
+
+                                                return Command.SINGLE_SUCCESS;
+                                            })))
+                        .then(
+                                Commands.literal("enableTelefrag").then(
+                                        Commands.argument("bart", EntityArgument.entities())
+                                                .executes(context -> {
+                                                    List<Entity> bart = (List<Entity>) EntityArgument.getEntities(context, "bart");
+
+                                                    for (Entity b : bart) {
+                                                        if (b instanceof BartEntity) {
+                                                            ((BartEntity)b).enableTelefrag();
+                                                        }
+                                                    }
+
+                                                    return Command.SINGLE_SUCCESS;
+                                                })))
+
+        );
     }
 }

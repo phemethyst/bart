@@ -66,13 +66,16 @@ public class BartEntity extends Monster {
     public int currentTransitionTime;
     public int transitionTimer = 100;
 
+    public boolean canDash = false;
+    public boolean canTelefrag = false;
+
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1, true));
-        // this.goalSelector.addGoal(2, new TelefraggerGoal(this));
+        this.goalSelector.addGoal(2, new TelefraggerGoal(this));
         this.goalSelector.addGoal(3, new TransitionGoal(this));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
@@ -88,10 +91,6 @@ public class BartEntity extends Monster {
                 .add(Attributes.KNOCKBACK_RESISTANCE, Bart.MAXINT);
     }
 
-    // might have to revisit tbh
-    // ofc i WILL have to revisit but i highly doubt walking will just work
-
-    // TODO: fix orangeteleportal animation
     private void setupAnimationStates() {
         if (this.passive) {
             this.idle2AnimState.start(tickCount);
@@ -130,7 +129,6 @@ public class BartEntity extends Monster {
         if (isMidDash) {
             this.getNavigation().stop();
             this.setDeltaMovement(dashTarget.x, dashTarget.y, dashTarget.z);
-            // TODO: disable walk animation and actually start work on the MVP and not bart
         }
 
         if (passive || wakeupeepyheadTimer > 0) {
@@ -147,6 +145,7 @@ public class BartEntity extends Monster {
         if (midDashTimer == 0) {
             isMidDash = false;
             dashTarget = Vec3.ZERO;
+            this.level().broadcastEntityEvent(this, (byte) 31);
         }
 
         if (this.level().isClientSide()) {
@@ -176,7 +175,10 @@ public class BartEntity extends Monster {
         } else if (id == 2 && this.level().isClientSide()) {
             this.wakeupeepyheadAnimState.start(this.tickCount);
         } else if (id == 30 && this.level().isClientSide()) {
+            this.isDashing = true;
             this.dashAnimState.start(this.tickCount);
+        } else if (id == 31 && this.level().isClientSide()) {
+            this.isDashing = false;
         }
     }
 
@@ -190,5 +192,13 @@ public class BartEntity extends Monster {
 
         dashTarget = diff.scale(0.1);
         midDashTimer = 20;
+    }
+
+    public void enableDash() {
+        canDash = true;
+    }
+
+    public void enableTelefrag() {
+        canTelefrag = true;
     }
 }
