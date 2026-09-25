@@ -1,5 +1,9 @@
 package org.phemethyst.bart.entity.custom;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerBossEvent;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.BossEvent;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.WalkAnimationState;
@@ -69,6 +73,9 @@ public class BartEntity extends Monster {
     public boolean canDash = false;
     public boolean canTelefrag = false;
     public boolean canDie = false;
+
+    private final ServerBossEvent bossEvent =
+            new ServerBossEvent(Component.literal("Bart, Destroyer of Bartenders"), BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_6);
 
     // kaupenjoe my goat
     // and if anyone has an issue, this is for bap and i kinda want something, right?
@@ -200,6 +207,11 @@ public class BartEntity extends Monster {
         midDashTimer = 20;
     }
 
+    @Override
+    public boolean isDeadOrDying() {
+        return this.getHealth() <= 0.0F && this.canDie;
+    }
+
     public void enableDash() {
         canDash = true;
     }
@@ -210,5 +222,23 @@ public class BartEntity extends Monster {
 
     public void enableDeath() {
         canDie = true;
+    }
+
+    @Override
+    public void startSeenByPlayer(ServerPlayer serverPlayer) {
+        super.startSeenByPlayer(serverPlayer);
+        this.bossEvent.addPlayer(serverPlayer);
+    }
+
+    @Override
+    public void stopSeenByPlayer(ServerPlayer serverPlayer) {
+        super.stopSeenByPlayer(serverPlayer);
+        this.bossEvent.removePlayer(serverPlayer);
+    }
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
     }
 }

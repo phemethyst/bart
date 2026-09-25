@@ -42,12 +42,15 @@ displayName="bart" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="phemethyst"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+Adds Bart to the game.
 '''
+
+[[mixins]]
+config="bart.mixins.json"
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]

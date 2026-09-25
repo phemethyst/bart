@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.phemethyst.bart.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "bart.refmap.json",
+  "mixins": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
