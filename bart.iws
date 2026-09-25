@@ -5,10 +5,892 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2b3d460-18c8-4ecf-8ec2-b82c577ec67f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bart.mixins.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/event/BartPopupRenderGuiEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/event/ClientEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/ui/BartUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/9.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/bart.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bart.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/bart.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bart.iws" beforeDir="false" afterPath="$PROJECT_DIR$/bart.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/META-INF/neoforge.mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/phemethyst/bart/entity/custom/BartEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/phemethyst/bart/entity/custom/BartEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/moddev/minecraft_assets.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/33un5eyj996o7r0xom1n9rhz8/62ak6grmgywfojsch87qgd2jx/configuration-cache-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/bxm76355taqxa3ri6ntlwua89/e8zi8gi0ueuifxwmj5s2sr0ff/configuration-cache-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/es57hepa4z78qloyyol0o3719/75hyk9e8k9v6cedal1bpramdr/configuration-cache-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/configuration-cache/es57hepa4z78qloyyol0o3719/avcb1p5u8018h86s014j96v1b/configuration-cache-report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/problems/problems-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/problems/problems-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/createMinecraftArtifacts/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/downloadAssets/nfrt_artifact_manifest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/downloadAssets/nfrt_artifact_manifest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212653_extractServer/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212653_mergeMappings/config/joined.tsrg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212653_mergeMappings/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212655_merge/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212657_rename/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212657_rename/libraries.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212700_decompile/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212700_decompile/libraries.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/com/mojang/blaze3d/font/TrueTypeGlyphProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/com/mojang/realmsclient/gui/screens/RealmsSelectWorldTemplateScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/advancements/critereon/EntitySubPredicates.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/advancements/critereon/MinMaxBounds.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/advancements/critereon/PlayerPredicate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/Minecraft.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/gui/screens/PresetFlatWorldScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/gui/screens/inventory/BookViewScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/gui/screens/worldselection/WorldCreationUiState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/gui/screens/worldselection/WorldOpenFlows.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/gui/spectator/categories/TeleportToPlayerMenuCategory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/resources/model/BlockStateModelLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/client/sounds/SoundEngineExecutor.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/Commands.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/arguments/ArgumentSignatures.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/arguments/OperationArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/arguments/item/ItemInput.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/execution/tasks/BuildContexts.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/synchronization/ArgumentTypeInfos.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/commands/synchronization/SuggestionProviders.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/Registry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/RegistrySetBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/component/DataComponentPatch.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/component/DataComponentType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/component/TypedDataComponent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/core/registries/BuiltInRegistries.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/data/info/RegistryDumpReport.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/data/tags/ItemTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/nbt/NbtOps.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/nbt/TagParser.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/chat/LastSeenMessages.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/codec/StreamCodec.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/protocol/ProtocolInfoBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/protocol/common/custom/CustomPacketPayload.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/protocol/configuration/ClientboundUpdateEnabledFeaturesPacket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/network/syncher/EntityDataSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/resources/HolderSetCodec.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/MinecraftServer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/commands/ReturnCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/dedicated/Settings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/level/ChunkTaskPriorityQueue.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/level/ServerChunkCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/level/ServerLevel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/server/network/ServerGamePacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/EncoderCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/ExtraCodecs.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/SortedArraySet.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/DataFixers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/AddNewChoices.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/BlockEntityUUIDFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/ChunkBedBlockEntityInjecterFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/ChunkHeightAndBiomeFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/ChunkProtoTickListFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/FixProjectileStoredItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/ItemSpawnEggFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/LeavesFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/OptionsKeyLwjgl3Fix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/util/datafix/fixes/OptionsKeyTranslationFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/Entity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/Leashable.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/SpawnPlacements.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/TamableAnimal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/ai/Brain.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/ai/behavior/InteractWith.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/animal/Sheep.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/animal/axolotl/AxolotlAi.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/monster/hoglin/HoglinAi.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/monster/piglin/PiglinAi.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/monster/piglin/StartHuntingHoglin.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/entity/projectile/AbstractArrow.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/inventory/AbstractFurnaceMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/item/AdventureModePredicate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/item/EitherHolder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/item/crafting/RecipeManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/item/enchantment/ConditionalEffect.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/GameRules.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/biome/Climate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/block/BaseEntityBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/chunk/PalettedContainer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/levelgen/presets/WorldPresets.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/level/storage/loot/predicates/LootItemBlockStatePropertyCondition.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212726_patch/patches/joined/net/minecraft/world/ticks/SavedTick.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/pipeline/RenderTarget.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/platform/GlStateManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/platform/Window.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/systems/RenderSystem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/vertex/PoseStack.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/vertex/VertexConsumer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/vertex/VertexFormat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/blaze3d/vertex/VertexFormatElement.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/math/Transformation.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/realmsclient/gui/screens/RealmsGenericErrorScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/com/mojang/realmsclient/gui/screens/RealmsNotificationsScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/CrashReport.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/CrashReportCategory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/FileUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/ReportType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/SharedConstants.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/Util.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/advancements/Advancement.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/advancements/AdvancementRewards.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/advancements/critereon/ItemAttributeModifiersPredicate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/advancements/critereon/ItemEnchantmentsPredicate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/Camera.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/ClientBrandRetriever.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/ClientRecipeBook.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/GameNarrator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/KeyMapping.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/KeyboardHandler.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/Minecraft.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/MouseHandler.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/Options.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/RecipeBookCategories.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/Screenshot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/ToggleKeyMapping.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/User.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/color/block/BlockColors.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/color/item/ItemColors.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/Font.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/Gui.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/GuiGraphics.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/MapRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/AbstractButton.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/AbstractWidget.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/BossHealthOverlay.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/Button.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/DebugScreenOverlay.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/EditBox.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/components/toasts/ToastComponent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/font/providers/GlyphProviderType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/ChatScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/ConnectScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/LoadingOverlay.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/MenuScreens.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/PauseScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/Screen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/TitleScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/advancements/AdvancementTab.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/advancements/AdvancementTabType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/advancements/AdvancementsScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/AbstractContainerScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/EffectRenderingInventoryScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/EnchantmentScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/HangingSignEditScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/InventoryScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/MerchantScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/tooltip/ClientTooltipComponent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/inventory/tooltip/TooltipRenderUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/options/controls/KeyBindsList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/options/controls/KeyBindsScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/packs/PackSelectionModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/recipebook/RecipeBookComponent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/CreateWorldScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/ExperimentsScreen.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/PresetEditor.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/WorldCreationContext.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/WorldCreationUiState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/WorldOpenFlows.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/gui/screens/worldselection/WorldSelectionList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/main/Main.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/model/HierarchicalModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/model/HumanoidModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/model/geom/LayerDefinitions.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/model/geom/ModelLayers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/AccountProfileKeyPairManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ClientChunkCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ClientCommonPacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ClientConfigurationPacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ClientLevel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ClientPacketListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/CommonListenerCookie.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/KnownPacksManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/MultiPlayerGameMode.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/PlayerInfo.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/ServerData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/SessionSearchTrees.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/TagCollector.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/chat/ChatListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/prediction/BlockStatePredictionHandler.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/multiplayer/resolver/AddressCheck.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/BreakingItemParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/FireworkParticles.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/ItemPickupParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/MobAppearanceParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/Particle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/ParticleEngine.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/ParticleRenderType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/PortalParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/ReversePortalParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/SingleQuadParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/TerrainParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/particle/VibrationSignalParticle.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/player/AbstractClientPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/player/LocalPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/DimensionSpecialEffects.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/EffectInstance.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/FogRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/GameRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/ItemBlockRenderTypes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/ItemInHandRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/LevelRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/LightTexture.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/PanoramaRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/PostChain.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/RenderBuffers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/RenderType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/ScreenEffectRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/ShaderInstance.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/Sheets.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/SpriteCoordinateExpander.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/BlockModelShaper.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/BlockRenderDispatcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/LiquidBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/ModelBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/BakedQuad.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/BlockElement.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/BlockElementFace.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/BlockModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/FaceBakery.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/ItemModelGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/ItemOverrides.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/ItemTransform.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/ItemTransforms.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/block/model/MultiVariant.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/BannerRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/BeaconRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/BlockEntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/BlockEntityRenderers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/BrushableBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/ChestRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/ConduitRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/DecoratedPotRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/EnchantTableRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/LecternRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/PistonHeadRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/ShulkerBoxRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/SignRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/SkullBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/SpawnerRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/StructureBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/TheEndGatewayRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/blockentity/TrialSpawnerRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/chunk/RenderChunkRegion.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/chunk/RenderRegionCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/chunk/SectionCompiler.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/chunk/SectionRenderDispatcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/culling/Frustum.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/BoatRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/EntityRenderDispatcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/EntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/FallingBlockRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/FishingHookRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/ItemEntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/ItemFrameRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/ItemRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/LivingEntityRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/layers/ElytraLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/layers/HumanoidArmorLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/layers/PlayerItemInHandLayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/entity/player/PlayerRenderer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/item/ItemProperties.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/AbstractTexture.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/MipmapGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/SpriteContents.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/SpriteLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/Stitcher.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/TextureAtlas.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/TextureAtlasSprite.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/atlas/SpriteResourceLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/renderer/texture/atlas/SpriteSources.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/SplashManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/language/ClientLanguage.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/language/I18n.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/language/LanguageManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/BakedModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/ModelBaker.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/ModelBakery.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/ModelManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/ModelResourceLocation.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/ModelState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/MultiPartBakedModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/SimpleBakedModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/model/WeightedBakedModel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/resources/sounds/SoundInstance.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/server/IntegratedServer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/server/LanServerDetection.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/server/LanServerPinger.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/sounds/MusicManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/client/sounds/SoundEngine.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/CommandSourceStack.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/Commands.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/SharedSuggestionProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/EntityArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/MessageArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/ObjectiveArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/ResourceLocationArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/TeamArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/coordinates/BlockPosArgument.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/selector/EntitySelector.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/arguments/selector/EntitySelectorParser.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/commands/synchronization/ArgumentTypeInfos.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/DefaultedMappedRegistry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/Holder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/HolderLookup.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/HolderSet.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/MappedRegistry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/NonNullList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/Registry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/RegistrySetBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/component/DataComponentHolder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/component/DataComponentMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/component/DataComponentPatch.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/component/PatchedDataComponentMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/dispenser/BoatDispenseItemBehavior.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/dispenser/DispenseItemBehavior.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/dispenser/ShearsDispenseItemBehavior.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/particles/BlockParticleOption.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/particles/ItemParticleOption.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/registries/BuiltInRegistries.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/core/registries/Registries.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/DataGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/DataProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/HashCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/Main.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/advancements/AdvancementProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/loot/BlockLootSubProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/loot/EntityLootSubProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/loot/LootTableProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/recipes/RecipeOutput.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/recipes/RecipeProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/recipes/ShapedRecipeBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/recipes/ShapelessRecipeBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/recipes/SimpleCookingRecipeBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/registries/RegistriesDatapackGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/registries/RegistryPatchGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/registries/VanillaRegistries.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/BannerPatternTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/BiomeTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/CatVariantTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/DamageTypeTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/EnchantmentTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/EntityTypeTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/FlatLevelGeneratorPresetTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/FluidTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/GameEventTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/InstrumentTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/IntrinsicHolderTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/ItemTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/PaintingVariantTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/PoiTypeTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/StructureTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/TagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/tags/WorldPresetTagsProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/data/worldgen/BootstrapContext.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/gametest/framework/GameTest.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/gametest/framework/GameTestInfo.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/gametest/framework/GameTestRegistry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/gametest/framework/GameTestServer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/gametest/framework/TestCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/locale/Language.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/nbt/CompoundTag.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/nbt/ListTag.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/nbt/NbtAccounter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/nbt/NbtIo.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/nbt/StringTag.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/CompressionEncoder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/Connection.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/ConnectionProtocol.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/FriendlyByteBuf.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/PacketBundleUnpacker.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/PacketEncoder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/RegistryFriendlyByteBuf.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/chat/ClickEvent.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/chat/ComponentSerialization.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/chat/SignableCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/chat/contents/TranslatableContents.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/codec/ByteBufCodecs.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/BundlePacket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/BundlerInfo.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/PacketFlow.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/common/ClientCommonPacketListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/common/ClientboundCustomPayloadPacket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/common/ServerCommonPacketListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/common/ServerboundCustomPayloadPacket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/common/custom/CustomPacketPayload.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/configuration/ConfigurationProtocols.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/configuration/ServerConfigurationPacketListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/configuration/ServerboundSelectKnownPacks.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/game/ServerGamePacketListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/status/ClientboundStatusResponsePacket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/protocol/status/ServerStatus.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/syncher/EntityDataSerializers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/network/syncher/SynchedEntityData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/FileToIdConverter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/HolderSetCodec.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/RegistryDataLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/RegistryOps.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/ResourceKey.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/resources/ResourceLocation.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/Bootstrap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/Eula.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/Main.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/MinecraftServer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/PlayerAdvancements.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/ReloadableServerResources.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/ServerAdvancementManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/WorldLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/advancements/AdvancementVisibilityEvaluator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/DataPackCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/EnchantCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/ForceLoadCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/ReloadCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/SetSpawnCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/SpreadPlayersCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/commands/TeleportCommand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/dedicated/DedicatedServer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/dedicated/DedicatedServerProperties.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/dedicated/ServerWatchdog.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/dedicated/Settings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/gui/MinecraftServerGui.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ChunkMap.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/DistanceManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/GenerationChunkHolder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ServerChunkCache.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ServerEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ServerLevel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ServerPlayer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/ServerPlayerGameMode.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/Ticket.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/level/WorldGenRegion.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/CommonListenerCookie.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ConfigurationTask.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/PlayerChunkSender.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ServerCommonPacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ServerConfigurationPacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ServerConnectionListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ServerGamePacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/ServerStatusPacketListenerImpl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/network/config/SynchronizeRegistriesTask.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/AbstractPackResources.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/OverlayMetadataSection.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/PackResources.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/PackType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/metadata/pack/PackMetadataSection.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/repository/BuiltInPackSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/repository/Pack.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/repository/PackRepository.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/repository/ServerPacksSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/resources/MultiPackResourceManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/resources/ReloadableResourceManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/resources/SimpleJsonResourceReloadListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/packs/resources/SimplePreparableReloadListener.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/players/PlayerList.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/rcon/RconConsoleSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/server/rcon/thread/RconClient.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/stats/RecipeBookSettings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/stats/StatsCounter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/BlockTags.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/FluidTags.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/ItemTags.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/TagBuilder.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/TagEntry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/TagFile.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/tags/TagLoader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/SpawnUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/datafix/DataFixers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/datafix/fixes/MobEffectIdFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/datafix/fixes/StructuresBecomeConfiguredFix.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/datafix/schemas/V2832.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/thread/BlockableEventLoop.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/util/worldupdate/WorldUpgrader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/MenuProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/damagesource/CombatTracker.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/damagesource/DamageEffects.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/damagesource/DamageScaling.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/damagesource/DamageSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/damagesource/DeathMessageType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/effect/MobEffect.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/effect/MobEffectInstance.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/effect/PoisonMobEffect.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/Entity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/EntityType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ExperienceOrb.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/FlyingMob.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/LightningBolt.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/LivingEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/Mob.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/MobCategory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/Shearable.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/SpawnPlacements.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/TamableAnimal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/attributes/Attribute.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/attributes/AttributeSupplier.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/attributes/Attributes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/attributes/DefaultAttributes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/CrossbowAttack.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/GiveGiftToHero.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/HarvestFarmland.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/StartAttacking.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/Swim.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/VillagerMakeLove.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/behavior/WorkAtComposter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/BreakDoorGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/EatBlockGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/FloatGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/MeleeAttackGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/RangedBowAttackGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/RangedCrossbowAttackGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/RemoveBlockGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/goal/RunAroundLikeCrazyGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/navigation/PathNavigation.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/navigation/WallClimberNavigation.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/village/VillageSiege.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/village/poi/PoiType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/ai/village/poi/PoiTypes.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Animal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Bee.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Cat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Fox.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/MushroomCow.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Ocelot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Parrot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Pig.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Rabbit.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Sheep.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/SnowGolem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/Wolf.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/allay/Allay.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/armadillo/Armadillo.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/camel/Camel.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/frog/Tadpole.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/horse/AbstractHorse.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/horse/SkeletonTrapGoal.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/animal/sniffer/Sniffer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/boss/EnderDragonPart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/boss/enderdragon/EnderDragon.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/boss/wither/WitherBoss.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/decoration/ArmorStand.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/decoration/HangingEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/decoration/ItemFrame.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/item/FallingBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/item/ItemEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/AbstractSkeleton.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Bogged.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/CrossbowAttackMob.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/EnderMan.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Evoker.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Husk.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Illusioner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/MagmaCube.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Monster.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Pillager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Ravager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Shulker.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Silverfish.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Skeleton.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Slime.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Witch.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/Zombie.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/ZombieVillager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/hoglin/Hoglin.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/piglin/AbstractPiglin.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/piglin/Piglin.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/piglin/PiglinAi.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/monster/piglin/StopHoldingItemIfNoLongerAdmiring.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/npc/AbstractVillager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/npc/CatSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/npc/Villager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/npc/VillagerTrades.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/npc/VillagerType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/player/Abilities.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/player/Inventory.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/player/Player.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/AbstractArrow.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/AbstractHurtingProjectile.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/FireworkRocketEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/FishingHook.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/LargeFireball.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/LlamaSpit.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/Projectile.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/ProjectileUtil.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/ShulkerBullet.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/SmallFireball.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/ThrowableProjectile.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/ThrownEnderpearl.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/projectile/WitherSkull.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/raid/Raid.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/AbstractMinecart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/AbstractMinecartContainer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/Boat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/ChestBoat.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/ContainerEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/Minecart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/MinecartCommandBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/MinecartFurnace.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/entity/vehicle/MinecartSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/flag/FeatureFlag.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/flag/FeatureFlagRegistry.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/flag/FeatureFlagSet.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/flag/FeatureFlags.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/food/FoodProperties.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/AbstractContainerMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/AbstractFurnaceMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/AnvilMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/ArmorSlot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/BeaconMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/BrewingStandMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/EnchantmentMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/FurnaceResultSlot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/GrindstoneMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/MenuType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/RecipeBookMenu.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/RecipeBookType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/ResultSlot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/ShulkerBoxSlot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/inventory/Slot.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ArmorItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ArrowItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/AxeItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BlockItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BoneMealItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BowItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BrushItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BucketItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/BundleItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ChorusFruitItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/CreativeModeTab.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/CrossbowItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/DispensibleContainerItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/DyeColor.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ElytraItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/FireChargeItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/FishingRodItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/FlintAndSteelItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/HoeItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/HoneyBottleItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/HoneycombItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/Item.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ItemDisplayContext.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ItemStack.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/Items.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/MapItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/MilkBucketItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/MinecartItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/PickaxeItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ProjectileWeaponItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/Rarity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ShearsItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ShieldItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/ShovelItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/SolidBucketItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/SpawnEggItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/SpyglassItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/StandingAndWallBlockItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/SwordItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/Tiers.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/TooltipFlag.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/TridentItem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/UseAnim.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/alchemy/PotionBrewing.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/alchemy/PotionContents.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/component/BundleContents.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/component/FireworkExplosion.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/component/ItemContainerContents.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/BannerDuplicateRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/BookCloningRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/Ingredient.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/Recipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/RecipeManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/RecipeType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/RepairItemRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/ShapedRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/ShapedRecipePattern.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/ShapelessRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/ShulkerBoxColoring.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/SimpleCookingSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/SmithingTransformRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/crafting/SmithingTrimRecipe.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/enchantment/Enchantment.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/item/enchantment/EnchantmentHelper.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/BaseSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/BlockAndTintGetter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/BlockGetter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/DataPackConfig.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/Explosion.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/ExplosionDamageCalculator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/ForcedChunksSavedData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/Level.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/LevelReader.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/LevelSettings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/NaturalSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/SignalGetter.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/biome/Biome.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/biome/BiomeGenerationSettings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/biome/BiomeSpecialEffects.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/biome/MobSpawnSettings.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/AbstractCauldronBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/AttachedStemBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BambooSaplingBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BambooStalkBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BaseFireBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BaseRailBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BeehiveBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BigDripleafBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/Block.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/Blocks.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BubbleColumnBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BucketPickup.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/BushBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CactusBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CampfireBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CauldronBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ChestBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ChorusFlowerBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ChorusPlantBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CocoaBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ComparatorBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ComposterBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/ConcretePowderBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CoralBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CrafterBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/CropBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DeadBushBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DetectorRailBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DiodeBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DoorBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DoublePlantBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DropExperienceBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/DropperBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/EnchantingTableBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/FarmBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/FenceGateBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/FireBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/FlowerPotBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/FungusBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/GrowingPlantHeadBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/LeavesBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/LiquidBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/MangrovePropaguleBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/MushroomBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/NetherWartBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/NoteBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/PitcherCropBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/PointedDripstoneBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/PowderSnowBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/PoweredRailBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/PumpkinBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/RailBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/RailState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/RedStoneOreBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/RedStoneWireBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SaplingBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SculkCatalystBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SculkSensorBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SculkShriekerBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SeagrassBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SmallDripleafBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SoundType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SpawnerBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SpongeBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SpreadingSnowyDirtBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/StemBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SugarCaneBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/SweetBerryBushBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TallGrassBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TntBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TrapDoorBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TripWireBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TripWireHookBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/TurtleEggBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/VineBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/WeatheringCopper.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/WebBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/AbstractFurnaceBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/BeaconBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/BlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/BlockEntityType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/BrewingStandBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/ChestBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/ConduitBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/HopperBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/ShulkerBoxBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/SpawnerBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/entity/trialspawner/TrialSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/grower/TreeGrower.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/piston/PistonBaseBlock.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/piston/PistonMovingBlockEntity.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/piston/PistonStructureResolver.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/state/BlockBehaviour.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/block/state/BlockState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/ChunkAccess.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/ChunkGenerator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/ImposterProtoChunk.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/LevelChunk.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/LevelChunkSection.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/PalettedContainer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/status/ChunkStatus.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/status/ChunkStatusTasks.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/storage/ChunkSerializer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/storage/EntityStorage.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/chunk/storage/SectionStorage.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/dimension/end/EndDragonFight.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/entity/PersistentEntitySectionManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/entity/TransientEntitySectionManager.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/gameevent/vibrations/VibrationSystem.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/Beardifier.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/DebugLevelSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/PhantomSpawner.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/WorldDimensions.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/feature/MonsterRoomFeature.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/feature/configurations/TreeConfiguration.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/feature/treedecorators/AlterGroundDecorator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/feature/trunkplacers/TrunkPlacer.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/placement/EnvironmentScanPlacement.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/structure/Structure.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/structure/StructurePiece.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/structure/StructureStart.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/structure/templatesystem/StructureProcessor.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/lighting/BlockLightEngine.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/lighting/LightEngine.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/material/FlowingFluid.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/material/Fluid.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/material/FluidState.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/material/LavaFluid.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/pathfinder/PathfindingContext.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/pathfinder/WalkNodeEvaluator.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/portal/PortalShape.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/saveddata/SavedData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/DerivedLevelData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/DimensionDataStorage.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/LevelStorageSource.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/PlayerDataStorage.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/PrimaryLevelData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/ServerLevelData.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/LootContext.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/LootDataType.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/LootParams.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/LootPool.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/LootTable.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/functions/SmeltItemFunction.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/parameters/LootContextParamSets.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/level/storage/loot/providers/nbt/ContextNbtProvider.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212727_applyNeoforgePatches/patches/net/minecraft/world/phys/AABB.java.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212728_transformSources/ats/accesstransformer.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212728_transformSources/console_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212728_transformSources/libraries.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/neoformruntime/20260916-212728_transformSources/problems.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/run/command_history.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/command_history.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-1.log.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/debug-2.log.gz" afterDir="false" />
@@ -32,7 +914,6 @@
       <change beforePath="$PROJECT_DIR$/run/saves/combart arena/stats/380df991-f603-344c-a090-369bad2a924a.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/combart arena/stats/380df991-f603-344c-a090-369bad2a924a.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/custom/BartEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/phemethyst/bart/entity/custom/BartEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/templates/META-INF/neoforge.mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/templates/META-INF/neoforge.mods.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +964,26 @@
     <breakpoint_rules converted="true" />
     <ui_properties converted="true" />
   </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -114,18 +1015,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JavaMethodFindUsagesOptions.isOverridingMethods": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/andrea/projects/bart/bart.ipr",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JavaClassFindUsagesOptions.isDerivedClasses&quot;: &quot;true&quot;,
+    &quot;JavaClassFindUsagesOptions.isFieldsUsages&quot;: &quot;true&quot;,
+    &quot;JavaClassFindUsagesOptions.isMethodsUsages&quot;: &quot;true&quot;,
+    &quot;JavaMethodFindUsagesOptions.isOverridingMethods&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/andrea/projects/bart/build.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
@@ -146,6 +1050,50 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="bart.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/clientRunVmArgs.txt -Dfml.modFolders=bart%%$PROJECT_DIR$/build/classes/java/main:bart%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Data" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="bart.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/dataRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/dataRunVmArgs.txt -Dfml.modFolders=bart%%$PROJECT_DIR$/build/classes/java/main:bart%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTestServer" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="bart.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/gameTestServerRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/gameTestServerRunVmArgs.txt -Dfml.modFolders=bart%%$PROJECT_DIR$/build/classes/java/main:bart%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="bart.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/build/moddev/serverRunVmArgs.txt -Dfml.modFolders=bart%%$PROJECT_DIR$/build/classes/java/main:bart%%$PROJECT_DIR$/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />

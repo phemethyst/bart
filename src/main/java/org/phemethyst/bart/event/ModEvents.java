@@ -1,11 +1,14 @@
 package org.phemethyst.bart.event;
 
 import com.mojang.brigadier.Command;
+import com.mojang.brigadier.arguments.StringArgumentType;
+import net.minecraft.client.Minecraft;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.vehicle.Minecart;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -102,7 +105,25 @@ public class ModEvents {
 
                                                     return Command.SINGLE_SUCCESS;
                                                 })))
+                        .then(
+                                Commands.literal("execute").then(
+                                        Commands.argument("bart", EntityArgument.entities()).then(
+                                            Commands.argument("str", StringArgumentType.string())
+                                                    .executes(context -> {
+                                                        String bart = StringArgumentType.getString(context, "str");
 
+                                                        context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource().withPermission(4), bart);
+
+                                                        List<Entity> bart2 = (List<Entity>) EntityArgument.getEntities(context, "bart");
+
+                                                        for (Entity b : bart2) {
+                                                            if (b instanceof BartEntity) {
+                                                                ((BartEntity)b).buffPicked();
+                                                            }
+                                                        }
+
+                                                        return Command.SINGLE_SUCCESS;
+                                                }))))
         );
     }
 }

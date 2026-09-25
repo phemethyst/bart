@@ -1,9 +1,11 @@
 package org.phemethyst.bart.entity.custom;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;
+import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.WalkAnimationState;
@@ -15,14 +17,20 @@ import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.monster.Zombie;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.neoforge.common.NeoForge;
+import org.jetbrains.annotations.Nullable;
 import org.phemethyst.bart.Bart;
 import org.phemethyst.bart.entity.goals.TelefraggerGoal;
 import org.phemethyst.bart.entity.goals.TransitionGoal;
+import org.phemethyst.bart.event.ASingularBoolean;
+import org.phemethyst.bart.ui.BartScreen;
 
-public class BartEntity extends Monster {
+public class BartEntity extends Monster implements MenuProvider {
     public final AnimationState wakeupeepyheadAnimState = new AnimationState();
     public final AnimationState downedAnimState = new AnimationState();
     public final AnimationState wersobackAnimState = new AnimationState();
@@ -35,16 +43,6 @@ public class BartEntity extends Monster {
 
     public final WalkAnimationState walkAnimation = new WalkAnimationState();
 
-    private int wakeupeepyheadTimeout = 0;
-    private int downedTimeout = 0;
-    private int wersobackTimeout = 0;
-    private int dashTimeout = 0;
-    private int blueteleportalTimeout = 0;
-    private int orangeteleportalTimeout = 0;
-    private int walkTimeout = 0;
-    private int idle2Timeout = 0;
-    private int toxicbitchTimeout = 0;
-
     public final int minTelefraggerTime = 150;
     public final int maxTelefraggerTime = 200;
     public int currentTelefraggerTime;
@@ -53,8 +51,10 @@ public class BartEntity extends Monster {
     public boolean isTelefragging = false;
     public boolean isDashing = false;
     public boolean isMidDash = false;
+    public boolean downed = false;
 
     private Vec3 dashTarget = Vec3.ZERO;
+    private final int minDashDistance = 5;
 
     public int dashTimer = -1;
     public int midDashTimer = -1;
@@ -157,8 +157,16 @@ public class BartEntity extends Monster {
         }
 
         if (this.getHealth() <= 0 && !canDie) {
+            this.downed = true;
+            this.level().broadcastEntityEvent(this, (byte) 41); // 41 but i got 41 bart
+        }
+
+        if (this.downed) {
             this.setHealth(this.getMaxHealth());
-            this.dead = false;
+            this.level().broadcastEntityEvent(this, (byte) 40);
+            this.setNoAi(true);
+        } else {
+            this.setNoAi(false);
         }
 
         if (this.level().isClientSide()) {
@@ -192,6 +200,16 @@ public class BartEntity extends Monster {
             this.dashAnimState.start(this.tickCount);
         } else if (id == 31 && this.level().isClientSide()) {
             this.isDashing = false;
+        } else if (id == 40 && this.level().isClientSide()) {
+            ASingularBoolean.heyDoIDrawTheUpgradesYet = true;
+        } else if (id == 41 && this.level().isClientSide()) {
+            this.downedAnimState.start(this.tickCount);
+
+            // pick 1 bart buff and 3 player
+
+
+
+            Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart")));
         }
     }
 
@@ -203,8 +221,12 @@ public class BartEntity extends Monster {
                 targetPos.y - bartPos.y,
                 targetPos.z - bartPos.z);
 
-        dashTarget = diff.scale(0.1);
-        midDashTimer = 20;
+        Vec3 dir = diff.scale(1/diff.length());
+
+        float distance = Math.min((float)minDashDistance, (float)diff.length());
+
+        dashTarget = dir.scale(distance * 0.2);
+        midDashTimer = 10;
     }
 
     @Override
@@ -240,5 +262,14 @@ public class BartEntity extends Monster {
     public void aiStep() {
         super.aiStep();
         this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
+    }
+
+    public void buffPicked() {
+        downed = false;
+    }
+
+    @Override
+    public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
+        return null;
     }
 }

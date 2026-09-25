@@ -1,21 +1,3 @@
-/summon bart:bart ~1 ~ ~
-/kill @e[type=bart:bart]
-/summon bart:bart ~1 ~ ~
-/as
-/summon bart:bart ~1 ~ ~
-/summon bart:bart ~1 ~ ~1
-/kill @e[type=bart:bart]
-/summon bart:bart ~1 ~ ~1
-/summon bart
-/summon bart:bart
-/kill @e[type=bart:bart]
-/summon bart:bart
-/kill @e[type=bart:bart]
-/summon bart:bart
-/effect give @s minecraft:jump_boost infinite 2 true
-/summon bart:bart
-/bart @e
-/bart @e enableDash
 /bart enableDash @e
 /bart enableDash
 /bart enableDash @e
@@ -48,3 +30,21 @@
 /bart enableDeath @e
 /kill @e[type=bart:bart]
 /summon bart:bart
+/bart enableDeath
+/bart enableDeath @e
+/bart enableDash @e
+/bart enableTelefrag @e
+/summon bart:bart
+/bart enableDeath @e
+/bart enableDash @e
+/bart enableTelefrag @e
+/title @a actionbar "estrogen:"
+/bart execute "title phemethyst actionbar \"give me estrogen\""
+/bart execute "title Dev actionbar \"give me estrogen\""
+/bart execute "fill -104 -61 -399 -104 -61 -399 stone"
+/bart execute "give Dev diamond_sword"
+/bart execute "give Dev diamond"
+/bart execute "give Dev bedrock 2736"
+/give @s netherite_sword[enchantments={[sharpness:255]}]
+/give @s netherite_sword[enchantments={"minecraft:sharpness":1}] 1
+/give @s netherite_sword[enchantments={"minecraft:sharpness":255}] 1

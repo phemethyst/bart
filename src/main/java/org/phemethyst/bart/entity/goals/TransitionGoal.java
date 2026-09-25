@@ -46,6 +46,6 @@ public class TransitionGoal extends Goal {
 
         bart.isDashing = true;
         bart.level().broadcastEntityEvent(bart, (byte) 30);
-        bart.dashTimer = 10;
+        bart.dashTimer = 5;
     }
 }
