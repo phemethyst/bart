@@ -66,6 +66,7 @@ public class BartModel<T extends BartEntity> extends HierarchicalModel<T> {
         this.animate(entity.wakeupeepyheadAnimState, BartAnimations.wakeupeepyhead, ageInTicks, 1f);
         this.animate(entity.dashAnimState, BartAnimations.dash, ageInTicks, 1f);
         this.animate(entity.downedAnimState, BartAnimations.downed, ageInTicks, 1f);
+        this.animate(entity.wersobackAnimState, BartAnimations.wersoback, ageInTicks, 1f);
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {

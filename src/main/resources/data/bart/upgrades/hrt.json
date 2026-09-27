@@ -1,0 +1,7 @@
+{
+  "target": "bart",
+  "name": "Hormone Replacement Therapy",
+  "alttext": "\"Trans rights are human rights!\"",
+  "effect": "Bart can dash now.",
+  "command": "bart enableDash @e"
+}

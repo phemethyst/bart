@@ -1,7 +1,9 @@
 package org.phemethyst.bart.entity.custom;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.BossEvent;
@@ -25,6 +27,8 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.NeoForge;
 import org.jetbrains.annotations.Nullable;
 import org.phemethyst.bart.Bart;
+import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buff.ModBuffs;
 import org.phemethyst.bart.entity.goals.TelefraggerGoal;
 import org.phemethyst.bart.entity.goals.TransitionGoal;
 import org.phemethyst.bart.event.ASingularBoolean;
@@ -163,7 +167,7 @@ public class BartEntity extends Monster implements MenuProvider {
 
         if (this.downed) {
             this.setHealth(this.getMaxHealth());
-            this.level().broadcastEntityEvent(this, (byte) 40);
+
             this.setNoAi(true);
         } else {
             this.setNoAi(false);
@@ -208,8 +212,23 @@ public class BartEntity extends Monster implements MenuProvider {
             // pick 1 bart buff and 3 player
 
 
+            Buff hrt = new Buff("FIX YOUR SHIT ANDREA",
+                    "\"It's broken as FUCK\"",
+                    "Do it right NOW!",
+                    "kill @a",
+                    "textures/upgrades/fistfulofdollar.png",
+                    "bart");
 
-            Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart")));
+            Registry<Buff> buffReg = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
+
+            for (Buff b : buffReg) {
+                hrt = b;
+                break;
+            }
+
+            Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart"), hrt));
+        } else if (id == 42 && this.level().isClientSide()) {
+            this.wersobackAnimState.start(this.tickCount);
         }
     }
 
@@ -265,7 +284,7 @@ public class BartEntity extends Monster implements MenuProvider {
     }
 
     public void buffPicked() {
-        downed = false;
+        this.level().broadcastEntityEvent(this, (byte) 42);
     }
 
     @Override

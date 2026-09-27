@@ -1,6 +1,3 @@
-/bart enableDash @e
-/bart enableDash
-/bart enableDash @e
 /bart enableDash @e[type=bart:bart]
 /bart enableDash @e[type=bart:bart] 12123123123
 /bart enableDash @e
@@ -48,3 +45,6 @@
 /give @s netherite_sword[enchantments={[sharpness:255]}]
 /give @s netherite_sword[enchantments={"minecraft:sharpness":1}] 1
 /give @s netherite_sword[enchantments={"minecraft:sharpness":255}] 1
+/bart enableDeath
+/bart enableDeath @e
+/summon bart:bart
