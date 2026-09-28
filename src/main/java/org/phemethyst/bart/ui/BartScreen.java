@@ -23,6 +23,11 @@ public class BartScreen extends Screen {
     public Buff buff;
 
     @Override
+    public boolean shouldCloseOnEsc() {
+        return false;
+    }
+
+    @Override
     protected void init() {
         super.init();
 
@@ -51,7 +56,7 @@ public class BartScreen extends Screen {
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, buff.getIconLoc());
 
-        graphics.blit(buff.getIconLoc(), (this.getRectangle().width() / 2) - 125, (this.getRectangle().height() / 2) + 60, 0, 0, 100, 100, 100, 100);
+        graphics.blit(buff.getIconLoc(), (this.getRectangle().width() / 2) - 115, (this.getRectangle().height() / 2) + 70, 0, 0, 100, 100, 100, 100);
     }
 
     protected void renderText(GuiGraphics graphics) {

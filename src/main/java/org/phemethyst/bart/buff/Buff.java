@@ -27,7 +27,7 @@ public class Buff {
                     Codec.STRING.fieldOf("icon").forGetter(Buff::getIcon)
             ).apply(instance, Buff::new));
 
-    public Buff (String name, String altText, String effect, String command, String icon, String target) {
+    public Buff (String target, String name, String altText, String effect, String command, String icon) {
         this.name = name;
         this.altText = altText;
         this.effect = effect;

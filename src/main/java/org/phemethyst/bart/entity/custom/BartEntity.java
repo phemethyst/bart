@@ -74,6 +74,9 @@ public class BartEntity extends Monster implements MenuProvider {
     public int currentTransitionTime;
     public int transitionTimer = 100;
 
+    public int downedTimer = -1;
+    public int wersobackTimer = -1;
+
     public boolean canDash = false;
     public boolean canTelefrag = false;
     public boolean canDie = false;
@@ -119,6 +122,8 @@ public class BartEntity extends Monster implements MenuProvider {
         telefragTimer--;
         dashTimer--;
         midDashTimer--;
+        downedTimer--;
+        wersobackTimer--;
 
         transitionTimer--;
 
@@ -162,7 +167,16 @@ public class BartEntity extends Monster implements MenuProvider {
 
         if (this.getHealth() <= 0 && !canDie) {
             this.downed = true;
+            this.downedTimer = 15;
             this.level().broadcastEntityEvent(this, (byte) 41); // 41 but i got 41 bart
+        }
+
+        if (downedTimer == 0) {
+            this.level().broadcastEntityEvent(this, (byte) 43);
+        }
+
+        if (wersobackTimer == 0) {
+            this.downed = false;
         }
 
         if (this.downed) {
@@ -188,6 +202,8 @@ public class BartEntity extends Monster implements MenuProvider {
 
     @Override
     public void handleEntityEvent(byte id) {
+        Bart.LOGGER.info("estrogen: {}", id);
+
         super.handleEntityEvent(id);
 
         if (this.level().isClientSide() && this.passive) {
@@ -208,27 +224,31 @@ public class BartEntity extends Monster implements MenuProvider {
             ASingularBoolean.heyDoIDrawTheUpgradesYet = true;
         } else if (id == 41 && this.level().isClientSide()) {
             this.downedAnimState.start(this.tickCount);
-
+        } else if (id == 42 && this.level().isClientSide()) {
+            downedAnimState.stop();
+            this.wersobackAnimState.start(this.tickCount);
+        } else if (id == 43 && this.level().isClientSide()) {
             // pick 1 bart buff and 3 player
 
-
-            Buff hrt = new Buff("FIX YOUR SHIT ANDREA",
-                    "\"It's broken as FUCK\"",
-                    "Do it right NOW!",
-                    "kill @a",
-                    "textures/upgrades/fistfulofdollar.png",
-                    "bart");
+            Buff hrt = new Buff("bart",
+                    "Nothing?",
+                    "\"Shops are 15% cheaper. No downsides!\"",
+                    "",
+                    "give @a minecraft:paper[minecraft:custom_name='{\\\"text\\\":\\\"1 Chakyldollar\\\"}']",
+                    "textures/upgrades/nothing.png"
+            );
 
             Registry<Buff> buffReg = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
 
+            // Bart.LOGGER.atInfo().setMessage(buffReg.getKey(hrt).getPath()).log();
+            Bart.LOGGER.info("Buff registry size: {}", buffReg.size());
+
             for (Buff b : buffReg) {
-                hrt = b;
+                //hrt = b;
                 break;
             }
 
             Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart"), hrt));
-        } else if (id == 42 && this.level().isClientSide()) {
-            this.wersobackAnimState.start(this.tickCount);
         }
     }
 
@@ -285,6 +305,7 @@ public class BartEntity extends Monster implements MenuProvider {
 
     public void buffPicked() {
         this.level().broadcastEntityEvent(this, (byte) 42);
+        this.wersobackTimer = 40;
     }
 
     @Override
