@@ -1,0 +1,8 @@
+{
+  "target": "player",
+  "name": "Free Money Glitch",
+  "altText": "\"free money!!!1111!!\"",
+  "effect": "You get a diamond.",
+  "command": "give @a minecraft:diamond",
+  "icon": "textures/upgrades/hrt.png"
+}

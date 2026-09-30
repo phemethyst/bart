@@ -9,6 +9,8 @@ import net.minecraft.resources.ResourceLocation;
 import org.phemethyst.bart.Bart;
 
 public class BartUI {
+    // random kid, not even used.
+
     private static final ResourceLocation GUI_TEXTURE =
             ResourceLocation.fromNamespaceAndPath(Bart.MODID, "textures/upgrades/fistfulofdollar.png");
 

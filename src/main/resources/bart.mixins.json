@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "bart.refmap.json",
   "mixins": [
-
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

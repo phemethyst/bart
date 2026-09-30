@@ -1,14 +1,3 @@
-/bart enableTelefrag @e
-/summon bart:bart
-/bart enableDash @e
-/bart enableTelefrag @e
-/bart enableDeath
-/bart enableDeath @e
-/summon bart:bart
-/kill @e[type=bart:bart]
-/bart enableDeath
-/bart enableDeath @e
-/kill @e[type=bart:bart]
 /summon bart:bart
 /bart enableDeath
 /bart enableDeath @e
@@ -48,3 +37,14 @@
 /effect give @s minecraft:regeneration infinite 255 true
 /bart enableDeath @e
 /summon bart:bart
+/kill
+/gamerule doImmediateRespawn true
+/kill
+/gamerule doImmediateRespawn false
+/kill
+/gamerule doImmediateRespawn true
+/kill
+/gamerule doImmediateRespawn false
+/kill
+/gamerule doImmediateRespawn true
+/kill

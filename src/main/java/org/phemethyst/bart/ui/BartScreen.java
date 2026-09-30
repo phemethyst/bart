@@ -45,12 +45,6 @@ public class BartScreen extends Screen {
         this.addRenderableWidget(test);
     }
 
-    private void text(Font font, Component message, Vec2 pos, int color, GuiGraphics graphics) {
-        font.drawInBatch(message, pos.x, pos.y, color, true, graphics.pose().last().pose(),
-                Minecraft.getInstance().renderBuffers().bufferSource(), Font.DisplayMode.NORMAL, Color.TRANSLUCENT,
-                15728880);
-    }
-
     protected void renderImages(GuiGraphics graphics) {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
@@ -65,6 +59,11 @@ public class BartScreen extends Screen {
                 Component.literal(buff.effect));
 
         label.renderCentered(graphics, (this.getRectangle().width() / 2) + 45, (this.getRectangle().height() / 2) + 85);
+
+        MultiLineLabel flavour = MultiLineLabel.create(font, 200, 1,
+                Component.literal("As if you had a choice.").withColor(Color.red.getRGB()));
+
+        flavour.renderCentered(graphics, (this.getRectangle().width() / 2), (this.getRectangle().height() / 2) + 40);
     }
 
     @Override
