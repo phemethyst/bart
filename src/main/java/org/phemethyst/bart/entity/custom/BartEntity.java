@@ -196,16 +196,12 @@ public class BartEntity extends Monster implements MenuProvider {
 
         if (this.level().isClientSide()) {
             this.setupAnimationStates();
-
-            if (this.passive) {
-                this.idle2AnimState.start(tickCount);
-            }
         }
     }
 
     public BartEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
-        buffList = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList();
+        buffList = new LinkedList<>(level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList());
     }
 
     @Override
@@ -213,11 +209,6 @@ public class BartEntity extends Monster implements MenuProvider {
         Bart.LOGGER.info("estrogen: {}", id);
 
         super.handleEntityEvent(id);
-
-        if (this.level().isClientSide() && this.passive) {
-            this.idle2AnimState.start(this.tickCount);
-            return;
-        }
 
         if (id == 1 && this.level().isClientSide()) {
             this.orangeteleportalAnimState.start(this.tickCount);
@@ -228,6 +219,8 @@ public class BartEntity extends Monster implements MenuProvider {
             this.dashAnimState.start(this.tickCount);
         } else if (id == 31 && this.level().isClientSide()) {
             this.isDashing = false;
+        } else if (id == 39) {
+            reset();
         } else if (id == 40 && this.level().isClientSide()) {
             ASingularBoolean.heyDoIDrawTheUpgradesYet = true;
         } else if (id == 41 && this.level().isClientSide()) {
@@ -246,7 +239,7 @@ public class BartEntity extends Monster implements MenuProvider {
             ); */
             Buff hrt;
 
-            if (buffList.size() == 0) {
+            if (buffList.isEmpty()) {
                 hrt = new Buff("bart",
                         "Extinction",
                         "\"Competition leads to winners.\"",
@@ -321,5 +314,12 @@ public class BartEntity extends Monster implements MenuProvider {
     @Override
     public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
         return null;
+    }
+
+    public void reset() {
+        passive = true;
+        wakeupeepyheadTimer = -1;
+        setHealth(getMaxHealth());
+        setNoAi(true);
     }
 }

@@ -1,10 +1,3 @@
-/give @s netherite_sword[enchantments={[sharpness:255]}]
-/give @s netherite_sword[enchantments={"minecraft:sharpness":1}] 1
-/give @s netherite_sword[enchantments={"minecraft:sharpness":255}] 1
-/bart enableDeath
-/bart enableDeath @e
-/summon bart:bart
-/give @s minecraft:paper[minecraft:custom_name='{"text":"1 Chakyldollar"}']
 /give @a minecraft:paper[minecraft:custom_name='{"text":"1 Chakyldollar"}']
 /give @s netherite_sword[enchantments={sharpness:255}]
 /summon bart:bart
@@ -48,3 +41,10 @@
 /item modify entity @s armor.head with minecraft:diamond 1
 /item replace entity @s armor.head with minecraft:diamond 1
 /item replace entity @s armor.head with bart:maid_dress_helmet[enchantments={binding_curse:1}]
+/summon bart
+/summon bart:bart
+/kill
+/summon bart:bart
+/kill
+/summon bart:bart
+/kill

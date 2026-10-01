@@ -95,7 +95,7 @@ public abstract class PlayerMixin extends LivingEntity {
                     "Nothing?",
                     "\"No downsides!\"",
                     "No upsides, either...",
-                    "title @a title \"Nothing ever happens.\"",
+                    "",
                     "textures/upgrades/nothing.png");
 
             Buff[] bTemp = {nothing, nothing, nothing};

@@ -14,6 +14,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.Minecart;
+import net.minecraft.world.phys.AABB;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
@@ -166,17 +167,5 @@ public class ModEvents {
     @SubscribeEvent
     public static void registerDatapackRegistries(DataPackRegistryEvent.NewRegistry event) {
         event.dataPackRegistry(ModBuffs.BUFF_REGKEY, Buff.CODEC, Buff.CODEC);
-    }
-
-    @SubscribeEvent
-    public static void respawn(PlayerEvent.PlayerRespawnEvent event) {
-        Player player = event.getEntity();
-
-        Bart.LOGGER.info("RESPAWN EVENT: " + player.level().isClientSide());
-
-        if (!player.level().isClientSide()) {
-            player.level().broadcastEntityEvent(player, (byte) 213);
-            Bart.LOGGER.info("SENT 213");
-        }
     }
 }
