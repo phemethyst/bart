@@ -6,6 +6,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.util.Mth;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.BossEvent;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.AnimationState;
@@ -33,6 +35,9 @@ import org.phemethyst.bart.entity.goals.TelefraggerGoal;
 import org.phemethyst.bart.entity.goals.TransitionGoal;
 import org.phemethyst.bart.event.ASingularBoolean;
 import org.phemethyst.bart.ui.BartScreen;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class BartEntity extends Monster implements MenuProvider {
     public final AnimationState wakeupeepyheadAnimState = new AnimationState();
@@ -80,6 +85,8 @@ public class BartEntity extends Monster implements MenuProvider {
     public boolean canDash = false;
     public boolean canTelefrag = false;
     public boolean canDie = false;
+
+    private List<Buff> buffList = new LinkedList<>();
 
     private final ServerBossEvent bossEvent =
             new ServerBossEvent(Component.literal("Bart, Destroyer of Bartenders"), BossEvent.BossBarColor.YELLOW, BossEvent.BossBarOverlay.NOTCHED_6);
@@ -198,6 +205,7 @@ public class BartEntity extends Monster implements MenuProvider {
 
     public BartEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
+        buffList = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList();
     }
 
     @Override
@@ -228,24 +236,26 @@ public class BartEntity extends Monster implements MenuProvider {
             downedAnimState.stop();
             this.wersobackAnimState.start(this.tickCount);
         } else if (id == 43 && this.level().isClientSide()) {
-            // pick 1 bart buff and 3 player
-
-            Buff hrt = new Buff("bart",
+            // Scrapped Bart trait, was useless lmao.
+            /* Buff hrt = new Buff("bart",
                     "Nothing?",
                     "\"Shops are 15% cheaper. No downsides!\"",
                     "",
                     "give @a minecraft:paper[minecraft:custom_name='{\\\"text\\\":\\\"1 Chakyldollar\\\"}']",
                     "textures/upgrades/nothing.png"
-            );
+            ); */
+            Buff hrt;
 
-            Registry<Buff> buffReg = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
-
-            // Bart.LOGGER.atInfo().setMessage(buffReg.getKey(hrt).getPath()).log();
-            Bart.LOGGER.info("Buff registry size: {}", buffReg.size());
-
-            for (Buff b : buffReg) {
-                //hrt = b;
-                break;
+            if (buffList.size() == 0) {
+                hrt = new Buff("bart",
+                        "Extinction",
+                        "\"Competition leads to winners.\"",
+                        "Bart can die.",
+                        "bart enableDeath @e",
+                        "textures/upgrades/extinction.png");
+            } else {
+                hrt = buffList.get(Mth.randomBetweenInclusive(RandomSource.create(), 0, buffList.size() - 1));
+                buffList.remove(hrt);
             }
 
             Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart"), hrt));

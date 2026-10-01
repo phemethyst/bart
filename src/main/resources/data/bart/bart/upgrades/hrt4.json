@@ -1,8 +1,0 @@
-{
-  "target": "player",
-  "name": "Free Money Glitch",
-  "altText": "\"free money!!!1111!!\"",
-  "effect": "You get gold.",
-  "command": "give @a minecraft:gold_ingot",
-  "icon": "textures/upgrades/hrt.png"
-}

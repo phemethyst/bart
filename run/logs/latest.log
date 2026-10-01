@@ -1,39 +1,39 @@
-[01Oct2026 00:45:22.667] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.250, --assetIndex, 17, --assetsDir, /home/andrea/.gradle/caches/neoformruntime/assets, --gameDir, ., --fml.fmlVersion, 4.0.44, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.250, --fml.neoFormVersion, 20240808.144430]
-[01Oct2026 00:45:22.669] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Arch Linux OpenJDK 64-Bit Server VM 21.0.12.1+1
-[01Oct2026 00:45:22.670] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.12.1 by Arch Linux; OS Linux arch amd64 version 7.1.9-arch1-2
-[01Oct2026 00:45:22.731] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
-[01Oct2026 00:45:22.842] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
-[01Oct2026 00:45:22.953] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
-[01Oct2026 00:45:22.996] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/home/andrea/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23126!/ Service=ModLauncher Env=CLIENT
-[01Oct2026 00:45:23.076] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 610.57.04, NVIDIA Corporation
-[01Oct2026 00:45:23.223] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
-[01Oct2026 00:45:23.223] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+[01Oct2026 21:42:00.613] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientdev, --version, 21.1.250, --assetIndex, 17, --assetsDir, /home/andrea/.gradle/caches/neoformruntime/assets, --gameDir, ., --fml.fmlVersion, 4.0.44, --fml.mcVersion, 1.21.1, --fml.neoForgeVersion, 21.1.250, --fml.neoFormVersion, 20240808.144430]
+[01Oct2026 21:42:00.615] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Arch Linux OpenJDK 64-Bit Server VM 21.0.12.1+1
+[01Oct2026 21:42:00.616] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 11.0.5+main.901c6ea8 starting: java version 21.0.12.1 by Arch Linux; OS Linux arch amd64 version 7.1.9-arch1-2
+[01Oct2026 21:42:00.696] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[01Oct2026 21:42:00.785] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[01Oct2026 21:42:00.935] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[01Oct2026 21:42:00.982] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=union:/home/andrea/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.15.2+mixin.0.8.7/2af2f021d8e02a0220dc27a7a72b4666d66d44ca/sponge-mixin-0.15.2+mixin.0.8.7.jar%23126!/ Service=ModLauncher Env=CLIENT
+[01Oct2026 21:42:01.043] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 610.57.04, NVIDIA Corporation
+[01Oct2026 21:42:01.235] [main/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[01Oct2026 21:42:01.236] [main/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
      Mod List:
 		Name Version (Mod Id)
 
 		bart 0.0.1 (bart)
 		Minecraft 1.21.1 (minecraft)
 		NeoForge 21.1.250 (neoforge)
-[01Oct2026 00:45:23.548] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
-[01Oct2026 00:45:23.552] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.250, --gameDir, ., --assetsDir, /home/andrea/.gradle/caches/neoformruntime/assets, --assetIndex, 17]
-[01Oct2026 00:45:23.573] [main/WARN] [mixin/]: Reference map 'bart.refmap.json' for bart.mixins.json could not be read. If this is a development environment you can ignore this message
-[01Oct2026 00:45:24.456] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 129 milliseconds
-[01Oct2026 00:45:24.469] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
-[01Oct2026 00:45:24.653] [pool-7-thread-1/WARN] [mixin/]: @Final field cooldowns:Lnet/minecraft/world/item/ItemCooldowns; in bart.mixins.json:PlayerMixin from mod bart should be final
-[01Oct2026 00:45:24.655] [pool-7-thread-1/WARN] [mixin/]: @Final field gameProfile:Lcom/mojang/authlib/GameProfile; in bart.mixins.json:PlayerMixin from mod bart should be final
-[01Oct2026 00:45:27.254] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01Oct2026 00:45:27.255] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01Oct2026 00:45:27.256] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[01Oct2026 00:45:27.257] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[01Oct2026 00:45:27.258] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01Oct2026 00:45:27.321] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/andrea/projects/bart/build/moddev/artifacts/neoforge-21.1.250.jar%23177!/assets/.mcassetsroot' uses unexpected schema
-[01Oct2026 00:45:27.322] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/andrea/projects/bart/build/moddev/artifacts/neoforge-21.1.250.jar%23177!/data/.mcassetsroot' uses unexpected schema
-[01Oct2026 00:45:27.338] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[01Oct2026 00:45:27.344] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[01Oct2026 00:45:27.406] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
-[01Oct2026 00:45:27.528] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.250, for MC 1.21.1
-[01Oct2026 00:45:27.994] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [bart]
-[01Oct2026 00:45:28.069] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator
+[01Oct2026 21:42:01.639] [main/INFO] [mixin/]: Compatibility level set to JAVA_21
+[01Oct2026 21:42:01.644] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientdev' with arguments [--version, 21.1.250, --gameDir, ., --assetsDir, /home/andrea/.gradle/caches/neoformruntime/assets, --assetIndex, 17]
+[01Oct2026 21:42:01.663] [main/WARN] [mixin/]: Reference map 'bart.refmap.json' for bart.mixins.json could not be read. If this is a development environment you can ignore this message
+[01Oct2026 21:42:02.864] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 229 Datafixer optimizations took 237 milliseconds
+[01Oct2026 21:42:02.905] [pool-7-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[01Oct2026 21:42:03.179] [pool-7-thread-1/WARN] [mixin/]: @Final field cooldowns:Lnet/minecraft/world/item/ItemCooldowns; in bart.mixins.json:PlayerMixin from mod bart should be final
+[01Oct2026 21:42:03.182] [pool-7-thread-1/WARN] [mixin/]: @Final field gameProfile:Lcom/mojang/authlib/GameProfile; in bart.mixins.json:PlayerMixin from mod bart should be final
+[01Oct2026 21:42:06.050] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01Oct2026 21:42:06.051] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01Oct2026 21:42:06.053] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01Oct2026 21:42:06.054] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01Oct2026 21:42:06.054] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01Oct2026 21:42:06.139] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/andrea/projects/bart/build/moddev/artifacts/neoforge-21.1.250.jar%23177!/assets/.mcassetsroot' uses unexpected schema
+[01Oct2026 21:42:06.139] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/home/andrea/projects/bart/build/moddev/artifacts/neoforge-21.1.250.jar%23177!/data/.mcassetsroot' uses unexpected schema
+[01Oct2026 21:42:06.160] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[01Oct2026 21:42:06.170] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[01Oct2026 21:42:06.238] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.3+5
+[01Oct2026 21:42:06.350] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.250, for MC 1.21.1
+[01Oct2026 21:42:06.957] [Render thread/INFO] [net.neoforged.neoforge.gametest.GameTestHooks/]: Enabled Gametest Namespaces: [bart]
+[01Oct2026 21:42:07.043] [Render thread/ERROR] [com.mojang.text2speech.Narrator/]: Error while loading the narrator
 com.mojang.text2speech.Narrator$InitializeException: Failed to load library flite
 	at MC-BOOTSTRAP/text2speech@1.17.9/com.mojang.text2speech.NarratorLinux$FliteLibrary.loadNative(NarratorLinux.java:69) ~[text2speech-1.17.9.jar%23110!/:?]
 	at MC-BOOTSTRAP/text2speech@1.17.9/com.mojang.text2speech.NarratorLinux.<init>(NarratorLinux.java:18) ~[text2speech-1.17.9.jar%23110!/:?]
@@ -155,69 +155,50 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 		at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 		at net.neoforged.devlaunch.Main.main(Main.java:57) [DevLaunch-1.0.2.jar:?]
-[01Oct2026 00:45:28.085] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/neoforge, mod/bart
-[01Oct2026 00:45:28.170] [Worker-Main-6/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
-[01Oct2026 00:45:28.233] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
-[01Oct2026 00:45:29.304] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[01Oct2026 00:45:29.304] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[01Oct2026 00:45:29.345] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
-[01Oct2026 00:45:29.346] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[01Oct2026 00:45:29.414] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[01Oct2026 00:45:29.419] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
-[01Oct2026 00:45:29.420] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[01Oct2026 00:45:29.420] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[01Oct2026 00:45:29.420] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
-[01Oct2026 00:45:29.423] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[01Oct2026 00:45:29.423] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
-[01Oct2026 00:45:29.423] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[01Oct2026 00:45:29.423] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[01Oct2026 00:45:29.473] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
-[01Oct2026 00:45:29.474] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
-[01Oct2026 00:45:29.474] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[01Oct2026 00:45:29.475] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
-[01Oct2026 00:45:29.475] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
-[01Oct2026 00:45:29.488] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[01Oct2026 00:45:29.516] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
-[01Oct2026 00:45:39.619] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1290 recipes
-[01Oct2026 00:45:39.721] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1399 advancements
-[01Oct2026 00:45:40.014] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
-[01Oct2026 00:45:40.014] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[01Oct2026 00:45:40.238] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[01Oct2026 00:45:40.333] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[01Oct2026 00:45:40.358] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[01Oct2026 00:45:40.359] [Server thread/INFO] [org.phemethyst.bart.Bart/]: Bart welcomes you.
-[01Oct2026 00:45:40.369] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 118 ms
-[01Oct2026 00:45:40.391] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[01Oct2026 00:45:40.391] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[01Oct2026 00:45:40.756] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:312a1b9d] logged in with entity id 33 at (3.5, -60.0, -2.5)
-[01Oct2026 00:45:40.791] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[01Oct2026 00:45:40.928] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 43 advancements
-[01Oct2026 00:45:44.916] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Gamerule doImmediateRespawn is now set to: true]
-[01Oct2026 00:45:44.920] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Gamerule doImmediateRespawn is now set to: true
-[01Oct2026 00:45:47.116] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev was killed
-[01Oct2026 00:45:47.119] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Killed Dev]
-[01Oct2026 00:45:47.125] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev was killed
-[01Oct2026 00:45:47.126] [Render thread/INFO] [org.phemethyst.bart.Bart/]: entity event 3
-[01Oct2026 00:45:47.126] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Killed Dev
-[01Oct2026 00:45:47.135] [Server thread/INFO] [org.phemethyst.bart.Bart/]: RESPAWN EVENT: false
-[01Oct2026 00:45:47.135] [Server thread/INFO] [org.phemethyst.bart.Bart/]: SENT 213
-[01Oct2026 00:45:47.144] [Render thread/INFO] [org.phemethyst.bart.Bart/]: entity event -43
-[01Oct2026 00:45:47.144] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow
-[01Oct2026 00:45:47.161] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
-[01Oct2026 00:45:47.167] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[01Oct2026 00:45:47.174] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[01Oct2026 00:45:47.175] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[01Oct2026 00:45:48.370] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
-[01Oct2026 00:45:48.417] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
-[01Oct2026 00:45:48.417] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[01Oct2026 00:45:48.420] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
-[01Oct2026 00:45:48.471] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[01Oct2026 00:45:48.471] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[01Oct2026 00:45:48.471] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[01Oct2026 00:45:48.509] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
-[01Oct2026 00:45:48.518] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
-[01Oct2026 00:45:48.519] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[01Oct2026 00:45:48.521] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (3)): All chunks are saved
-[01Oct2026 00:45:48.521] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[01Oct2026 00:45:48.521] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[01Oct2026 00:45:48.521] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[01Oct2026 21:42:07.060] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/neoforge, mod/bart
+[01Oct2026 21:42:07.153] [Worker-Main-8/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.1.05.hex, loading
+[01Oct2026 21:42:07.238] [Worker-Main-10/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-15.1.05.hex, loading
+[01Oct2026 21:42:08.399] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[01Oct2026 21:42:08.400] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[01Oct2026 21:42:08.448] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device Built-in Audio Analog Stereo
+[01Oct2026 21:42:08.449] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[01Oct2026 21:42:08.542] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[01Oct2026 21:42:08.547] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/signs.png-atlas
+[01Oct2026 21:42:08.547] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[01Oct2026 21:42:08.547] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[01Oct2026 21:42:08.547] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[01Oct2026 21:42:08.548] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[01Oct2026 21:42:08.548] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[01Oct2026 21:42:08.548] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[01Oct2026 21:42:08.549] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[01Oct2026 21:42:08.604] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[01Oct2026 21:42:08.605] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[01Oct2026 21:42:08.605] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[01Oct2026 21:42:08.606] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 64x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[01Oct2026 21:42:08.606] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/gui.png-atlas
+[01Oct2026 21:42:08.620] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[01Oct2026 21:42:08.654] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[01Oct2026 21:42:19.732] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1290 recipes
+[01Oct2026 21:42:19.837] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1399 advancements
+[01Oct2026 21:42:20.136] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.21.1
+[01Oct2026 21:42:20.136] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[01Oct2026 21:42:20.268] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[01Oct2026 21:42:20.440] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[01Oct2026 21:42:20.440] [Server thread/INFO] [org.phemethyst.bart.Bart/]: Bart welcomes you.
+[01Oct2026 21:42:20.479] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[01Oct2026 21:42:20.479] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[01Oct2026 21:42:21.328] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 18%
+[01Oct2026 21:42:21.330] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 3 ms
+[01Oct2026 21:42:24.731] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:95d5b7e6] logged in with entity id 1 at (15.674888353626669, -60.0, -28.40974139955136)
+[01Oct2026 21:42:24.755] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[01Oct2026 21:42:24.926] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 76 advancements
+[01Oct2026 21:43:21.692] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[01Oct2026 21:43:21.694] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[01Oct2026 21:43:21.716] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[01Oct2026 21:43:21.794] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[01Oct2026 21:43:21.803] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[01Oct2026 21:43:21.804] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[01Oct2026 21:43:21.808] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (New World (3)): All chunks are saved
+[01Oct2026 21:43:21.808] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[01Oct2026 21:43:21.808] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[01Oct2026 21:43:21.808] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved

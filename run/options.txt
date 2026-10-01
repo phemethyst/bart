@@ -14,7 +14,7 @@ glintStrength:0.75
 prioritizeChunkUpdates:0
 fullscreen:false
 gamma:0.5
-graphicsMode:1
+graphicsMode:2
 guiScale:2
 maxFps:120
 mipmapLevels:4

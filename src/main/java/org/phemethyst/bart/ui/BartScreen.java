@@ -22,6 +22,9 @@ public class BartScreen extends Screen {
 
     public Buff buff;
 
+    private int width;
+    private int height;
+
     @Override
     public boolean shouldCloseOnEsc() {
         return false;
@@ -31,43 +34,56 @@ public class BartScreen extends Screen {
     protected void init() {
         super.init();
 
+        width = this.getRectangle().width();
+        height = this.getRectangle().height();
+        float scale = Math.min(width / 960f, height / 540f);
+
         Font font = Minecraft.getInstance().font;
 
-        Button test = Button.builder(
+        Button bbutton = Button.builder(
                 Component.empty(), button -> {
                             Minecraft.getInstance().player.connection.sendCommand("bart execute @e \"" + buff.command + "\"");
                             Minecraft.getInstance().setScreen(null);
                 })
-                .size(250, 120)
-                .pos((this.getRectangle().width() / 2) - 125, (this.getRectangle().height() / 2) + 60)
+                .size((int)(240 * scale), (int)(67.5 * scale))
+                .pos((int)(388 * scale), (int)(360 * scale))
                 .build();
 
-        this.addRenderableWidget(test);
+        this.addRenderableWidget(bbutton);
     }
 
     protected void renderImages(GuiGraphics graphics) {
+        float scale = Math.min(width / 960f, height / 540f);
+
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, buff.getIconLoc());
 
-        graphics.blit(buff.getIconLoc(), (this.getRectangle().width() / 2) - 115, (this.getRectangle().height() / 2) + 70, 0, 0, 100, 100, 100, 100);
+        graphics.blit(buff.getIconLoc(), (int)(395 * scale), (int)(362 * scale),
+                0, 0, (int)(60 * scale), (int)(60 * scale),
+                (int)(60 * scale), (int)(60 * scale));
     }
 
     protected void renderText(GuiGraphics graphics) {
-        MultiLineLabel label = MultiLineLabel.create(font, 120, 7, Component.literal(buff.name),
+        float scale = Math.min(width / 960f, height / 540f);
+
+        MultiLineLabel label = MultiLineLabel.create(font, 160, 5, Component.literal(buff.name),
                 Component.literal(" "), Component.literal(buff.altText), Component.literal(" "),
                 Component.literal(buff.effect));
 
-        label.renderCentered(graphics, (this.getRectangle().width() / 2) + 45, (this.getRectangle().height() / 2) + 85);
+        label.renderCentered(graphics, (int)(535 * scale), (int)(370 * scale));
 
-        MultiLineLabel flavour = MultiLineLabel.create(font, 200, 1,
+        MultiLineLabel flavour = MultiLineLabel.create(font, 403, 4,
                 Component.literal("As if you had a choice.").withColor(Color.red.getRGB()));
 
-        flavour.renderCentered(graphics, (this.getRectangle().width() / 2), (this.getRectangle().height() / 2) + 40);
+        flavour.renderCentered(graphics, width / 2, this.getRectangle().bottom() - 200);
     }
 
     @Override
     public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+        width = this.getRectangle().width();
+        height = this.getRectangle().height();
+
         super.render(graphics, mouseX, mouseY, partialTick);
         this.renderImages(graphics);
         this.renderText(graphics);

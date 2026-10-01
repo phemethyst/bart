@@ -119,6 +119,29 @@ public class ModEvents {
                                                     return Command.SINGLE_SUCCESS;
                                                 })))
                         .then(
+                                Commands.literal("maid").then(
+                                        Commands.argument("bart", EntityArgument.entities())
+                                                .executes(context -> {
+                                                    List<Entity> bart = (List<Entity>) EntityArgument.getEntities(context, "bart");
+
+                                                    for (Entity b : bart) {
+                                                        if (b instanceof Player) {
+                                                            Player p = (Player)b;
+
+                                                            context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource().withPermission(4),
+                                                                    "item replace entity @a armor.head with bart:maid_dress_helmet[enchantments={binding_curse:1}]");
+                                                            context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource().withPermission(4),
+                                                                    "item replace entity @a armor.chest with bart:maid_dress_chestplate[enchantments={binding_curse:1}]");
+                                                            context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource().withPermission(4),
+                                                                    "item replace entity @a armor.legs with bart:maid_dress_leggings[enchantments={binding_curse:1}]");
+                                                            context.getSource().getServer().getCommands().performPrefixedCommand(context.getSource().withPermission(4),
+                                                                    "item replace entity @a armor.feet with bart:maid_dress_boots[enchantments={binding_curse:1}]");
+                                                        }
+                                                    }
+
+                                                    return Command.SINGLE_SUCCESS;
+                                                })))
+                        .then(
                                 Commands.literal("execute").then(
                                         Commands.argument("bart", EntityArgument.entities()).then(
                                             Commands.argument("str", StringArgumentType.string())
