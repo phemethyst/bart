@@ -201,7 +201,13 @@ public class BartEntity extends Monster implements MenuProvider {
 
     public BartEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
-        buffList = new LinkedList<>(level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList());
+        List<Buff> buffReg = new LinkedList<>(level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList());
+
+        for (Buff b : buffReg) {
+            if (b.getTarget() == Buff.Target.BART) {
+                buffList.add(b);
+            }
+        }
     }
 
     @Override
