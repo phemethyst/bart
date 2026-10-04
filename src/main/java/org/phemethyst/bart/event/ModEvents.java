@@ -25,14 +25,20 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 import org.phemethyst.bart.Bart;
 import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buff.ModAttachments;
 import org.phemethyst.bart.buff.ModBuffs;
 import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartModel;
 import org.phemethyst.bart.entity.custom.BartEntity;
 import org.phemethyst.bart.item.ModItems;
+import org.phemethyst.bart.packets.ClientPayloadHandler;
+import org.phemethyst.bart.packets.ServerPayloadHandler;
 import org.phemethyst.bart.ui.PlayerScreen;
 
 import java.util.List;
@@ -167,5 +173,18 @@ public class ModEvents {
     @SubscribeEvent
     public static void registerDatapackRegistries(DataPackRegistryEvent.NewRegistry event) {
         event.dataPackRegistry(ModBuffs.BUFF_REGKEY, Buff.CODEC, Buff.CODEC);
+    }
+
+    @SubscribeEvent
+    public static void getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(final RegisterPayloadHandlersEvent event) {
+        final PayloadRegistrar registrar = event.registrar("1");
+        registrar.playBidirectional(
+                Buff.ListRecord.TYPE,
+                ModAttachments.ENTITY_SERIALIZER.codec(),
+                new DirectionalPayloadHandler<>(
+                        ClientPayloadHandler::handleDataOnMain,
+                        ServerPayloadHandler::handleDataOnMain
+                )
+        );
     }
 }

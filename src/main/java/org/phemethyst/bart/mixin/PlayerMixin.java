@@ -1,18 +1,15 @@
 package org.phemethyst.bart.mixin;
 
 import com.mojang.authlib.GameProfile;
-import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.multiplayer.ClientPacketListener;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.GlobalPos;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.protocol.game.ServerboundClientCommandPacket;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.util.Mth;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Inventory;
@@ -22,22 +19,24 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemCooldowns;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.phemethyst.bart.Bart;
 import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buff.ModAttachments;
 import org.phemethyst.bart.buff.ModBuffs;
+import org.phemethyst.bart.packets.MixinBullshit;
 import org.phemethyst.bart.ui.PlayerScreen;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Mixin(Player.class)
-public abstract class PlayerMixin extends LivingEntity {
+public abstract class PlayerMixin extends LivingEntity implements MixinBullshit {
     @Shadow private boolean reducedDebugInfo;
     @Shadow @Final Inventory inventory;
     @Shadow @Final protected static EntityDataAccessor<Byte> DATA_PLAYER_MAIN_HAND;
@@ -53,7 +52,27 @@ public abstract class PlayerMixin extends LivingEntity {
     @Shadow public InventoryMenu inventoryMenu;
     @Shadow public AbstractContainerMenu containerMenu;
 
-    List<Buff> buffList = new LinkedList<>();
+    public List<Buff> buffList = new LinkedList<>();
+    private boolean openBuffScreen = false;
+
+    Buff nothing = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).get(ResourceLocation.fromNamespaceAndPath("bart", "nothing"));
+
+    private static final EntityDataAccessor<Buff.ListRecord> BUFFS =
+            SynchedEntityData.defineId(
+                    Player.class,
+                    ModAttachments.ENTITY_SERIALIZER
+            );
+
+    @Inject(method = "defineSynchedData", at = @At("TAIL"))
+    protected void defineSyncedData(SynchedEntityData.Builder builder, CallbackInfo ci) {
+        Buff.ListRecord output = new Buff.ListRecord(new LinkedList<>());
+        output.buffs().add(nothing);
+        output.buffs().add(nothing);
+        output.buffs().add(nothing);
+        builder.define(BUFFS, output);
+    }
+
+    Buff[] bTemp = {nothing, nothing, nothing};
 
     protected PlayerMixin(Level level, BlockPos pos, float yRot, GameProfile gameProfile) {
         super(EntityType.PLAYER, level);
@@ -79,56 +98,86 @@ public abstract class PlayerMixin extends LivingEntity {
             this.reducedDebugInfo = false;
         } else if (id == 22) {
             this.reducedDebugInfo = true;
-        } else if (id == -43 && level().isClientSide()) { // it's signed.
-            if (buffList.isEmpty()) {
-                Registry<Buff> buffReg = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
-                Bart.LOGGER.info("Buff registry size: {}", buffReg.size());
+        } else if (id == 43) { // it's signed.
+            Bart.LOGGER.info("meow");
 
-                for (Buff b : buffReg) {
-                    if (b.getTarget() == Buff.Target.PLAYER) {
-                        buffList.add(b);
-                    }
-                }
+            if (!level().isClientSide()) {
+                serverBuffStuff();
+            } else {
+                openBuffScreen = true;
             }
-
-            Buff nothing = new Buff("player",
-                    "Nothing?",
-                    "\"No downsides!\"",
-                    "No upsides, either...",
-                    "",
-                    "textures/upgrades/nothing.png");
-
-            Buff[] bTemp = {nothing, nothing, nothing};
-
-            if (buffList.size() >= 3) {
-                for (int i = 0; i < 3; i++) {
-                    Buff b = null;
-
-                    b = buffList.get(Mth.randomBetweenInclusive(RandomSource.create(), 0, buffList.size() - 1));
-
-                    if (i == 1 && b != bTemp[0]) {
-                        bTemp[1] = b;
-                        continue;
-                    } else if (i == 1) {
-                        i--;
-                        continue;
-                    }
-
-                    if (i == 2 && b != bTemp[0] && b != bTemp[1]) {
-                        bTemp[2] = b;
-                        continue;
-                    } else if (i == 2) {
-                        i--;
-                        continue;
-                    }
-
-                    bTemp[0] = b;
-                }
-            }
-
-            Minecraft.getInstance().setScreen(new PlayerScreen(Component.literal("bart"), bTemp[0], bTemp[1], bTemp[2]));
         } else {
             super.handleEntityEvent(id);
         }
+    }
+
+    @Inject(method = "tick", at = @At("TAIL"))
+    private void bart$clientTick(CallbackInfo ci) {
+        if (!level().isClientSide || !openBuffScreen) {
+            return;
+        }
+    }
+
+    public void serverBuffStuff() {
+        if (level().isClientSide()) {
+            return;
+        }
+
+        buffList = new LinkedList<>(this.getData(ModAttachments.PLAYER_BUFFS));
+
+        if (buffList.isEmpty() && ((Player)(Object)this).getInventory().isEmpty()) {
+            Registry<Buff> buffReg = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
+
+            for (Buff b : buffReg) {
+                if (b.getTarget() == Buff.Target.PLAYER && !Objects.equals(b.getName(), "Nothing?")) {
+                    buffList.add(b);
+                }
+            }
+        }
+
+        List<Buff> available = new LinkedList<>(buffList);
+
+        Buff.ListRecord bTemp = new Buff.ListRecord(new LinkedList<>());
+        bTemp.buffs().add(nothing);
+        bTemp.buffs().add(nothing);
+        bTemp.buffs().add(nothing);
+
+        RandomSource random = RandomSource.create();
+
+        available.removeAll(Collections.singletonList(nothing));
+
+        for (int i = 0; i < 3 && !available.isEmpty(); i++) {
+            int index = random.nextInt(available.size());
+            bTemp.buffs().set(i, available.remove(index));
+        }
+
+        this.entityData.set(BUFFS, bTemp);
+
+        // send packet to client
+        PacketDistributor.sendToAllPlayers(bTemp);
+    }
+
+    public void clientBuffStuff(Buff[] bT) {
+        if (!level().isClientSide()) {
+            return;
+        }
+
+        // bT is the stuff we get from packet.
+
+        if (bT == null || bT.length != 3 || bT[0] == null || bT[1] == null || bT[2] == null) {
+            return;
+        }
+
+        Minecraft.getInstance().setScreen(
+                new PlayerScreen(Component.literal("bart"), bT[0], bT[1], bT[2]));
+    }
+
+    public List<Buff> getBuffs() {
+        return buffList;
+    }
+
+    public void setBuffs(List<Buff> b) {
+        buffList = new LinkedList<>(b);
+        ((Player)(Object)this).setData(ModAttachments.PLAYER_BUFFS, buffList);
     }
 }

@@ -10,9 +10,11 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.phemethyst.bart.buff.Buff;
 
 import java.awt.*;
+import java.util.LinkedList;
 
 public class PlayerScreen extends Screen {
     public Buff buff1;
@@ -45,7 +47,11 @@ public class PlayerScreen extends Screen {
 
         Button b1button = Button.builder(
                         Component.empty(), button -> {
+                            Buff.ListRecord bTemp = new Buff.ListRecord(new LinkedList<>());
+                            bTemp.buffs().add(buff1);
+
                             Minecraft.getInstance().player.connection.sendCommand("bart execute @e \"" + buff1.command + "\"");
+                            PacketDistributor.sendToServer(bTemp);
                             Minecraft.getInstance().setScreen(null);
                         })
                 .size((int)(240 * scale), (int)(67.5 * scale))
@@ -54,7 +60,11 @@ public class PlayerScreen extends Screen {
 
         Button b2button = Button.builder(
                         Component.empty(), button -> {
+                            Buff.ListRecord bTemp = new Buff.ListRecord(new LinkedList<>());
+                            bTemp.buffs().add(buff2);
+
                             Minecraft.getInstance().player.connection.sendCommand("bart execute @e \"" + buff2.command + "\"");
+                            PacketDistributor.sendToServer(bTemp);
                             Minecraft.getInstance().setScreen(null);
                         })
                 .size((int)(240 * scale), (int)(67.5 * scale))
@@ -63,7 +73,11 @@ public class PlayerScreen extends Screen {
 
         Button b3button = Button.builder(
                         Component.empty(), button -> {
+                            Buff.ListRecord bTemp = new Buff.ListRecord(new LinkedList<>());
+                            bTemp.buffs().add(buff3);
+
                             Minecraft.getInstance().player.connection.sendCommand("bart execute @e \"" + buff3.command + "\"");
+                            PacketDistributor.sendToServer(bTemp);
                             Minecraft.getInstance().setScreen(null);
                         })
                 .size((int)(240 * scale), (int)(67.5 * scale))

@@ -1,15 +1,3 @@
-/give @a minecraft:paper[minecraft:custom_name='{"text":"1 Chakyldollar"}']
-/give @s netherite_sword[enchantments={sharpness:255}]
-/summon bart:bart
-/bart execute @e "bart enableDeath @e"
-/kill @e[type=bart:bart
-/kill @e[type=bart:bart]
-/
-/kill @e[type=bart:bart]
-/summon bart:bart
-/kill @e
-/gamerule doMobSpawning false
-/kill @e
 /clear
 /effect give @s minecraft:regeneration infinite 255 true
 /bart enableDeath @e
@@ -46,5 +34,17 @@
 /kill
 /summon bart:bart
 /kill
+/summon bart:bart
+/kill
+/killd
+/kill
+/gamerule keepInventory true
+/kill
+/effect give @s minecraft:strength infinite 255 true
+/summon bart:bart
+/kill
+/summon bart:bart
+/effect give @s minecraft:strength infinite 255 truwe
+/effect give @s minecraft:strength infinite 255 true
 /summon bart:bart
 /kill
