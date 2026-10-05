@@ -1,10 +1,12 @@
 package org.phemethyst.bart.entity.goals;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.util.Mth;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.Goal;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec2;
 import org.phemethyst.bart.entity.custom.BartEntity;
@@ -108,13 +110,9 @@ public class TelefraggerGoal extends Goal {
                     Mth.clamp(cosAngle, -1.0F, 1.0F)
             ));
 
-            AABB box = this.mob.getBoundingBox()
-                    .move(selectedPos.x - this.mob.getX(),
-                            this.mob.getY(),
-                            selectedPos.y - this.mob.getZ());
-
-            if (!this.mob.level().noCollision(this.mob, box)) {
-                continue;
+            if (!this.mob.level().getBlockState(new BlockPos((int)selectedPos.x, (int)this.mob.getY(), (int)selectedPos.y)).is(Blocks.AIR)) {
+                bartAngle = 0;
+                bartDist = 0;
             }
         }
 
