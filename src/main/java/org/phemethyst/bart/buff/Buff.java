@@ -53,6 +53,16 @@ public class Buff {
             Buff::new
     );
 
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Buff)) {
+            return false;
+        }
+
+        return ((Buff)obj).getName().equals(this.getName());
+    }
+
+
     public BuffRecord record() {
         return new BuffRecord(this.getTargetString(), this.name, this.altText, this.effect, this.command, this.icon);
     }

@@ -20,7 +20,7 @@ public class ServerPayloadHandler {
 
         Buff.ListRecord data = (Buff.ListRecord)customPacketPayload;
 
-        Bart.LOGGER.info("BEFORE REMOVE: {}", buffModified.stream().map(Buff::getName).toList());
+        Bart.LOGGER.info("BEFORE REMOVE 2: {}", buffModified.stream().map(Buff::getName).toList());
 
         buffModified.remove(data.buffs().get(0));
 

@@ -106,7 +106,7 @@ public class BartEntity extends Monster implements MenuProvider {
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 60)
-                .add(Attributes.MOVEMENT_SPEED, 0.4)
+                .add(Attributes.MOVEMENT_SPEED, 0.6)
                 .add(Attributes.FOLLOW_RANGE, 64)
                 .add(Attributes.ATTACK_DAMAGE, 4)
                 .add(Attributes.ATTACK_SPEED, 2)
@@ -254,6 +254,9 @@ public class BartEntity extends Monster implements MenuProvider {
                         "textures/upgrades/extinction.png");
             } else {
                 hrt = buffList.get(Mth.randomBetweenInclusive(RandomSource.create(), 0, buffList.size() - 1));
+
+                Bart.LOGGER.info("BEFORE REMOVE 3: {}", buffList.stream().map(Buff::getName).toList());
+
                 buffList.remove(hrt);
             }
 
@@ -323,9 +326,7 @@ public class BartEntity extends Monster implements MenuProvider {
     }
 
     public void reset() {
-        passive = true;
         wakeupeepyheadTimer = -1;
         setHealth(getMaxHealth());
-        setNoAi(true);
     }
 }

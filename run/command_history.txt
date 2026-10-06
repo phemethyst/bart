@@ -2,10 +2,6 @@
 /kill
 /gamerule doImmediateRespawn true
 /kill
-/gamerule doImmediateRespawn false
-/kill
-/gamerule doImmediateRespawn true
-/kill
 /gamerule keepInventory true
 /clear
 /kill
@@ -48,3 +44,7 @@
 /kill @e[type=bart:bart]
 /summon bart:bart
 /bart enableTelefrag @e
+/summon bart:bart
+/kill
+/effect give @s minecraft:strength infinite 255 true
+/summon bart:bart
