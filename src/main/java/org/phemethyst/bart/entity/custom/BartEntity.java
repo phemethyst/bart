@@ -326,7 +326,9 @@ public class BartEntity extends Monster implements MenuProvider {
     }
 
     public void reset() {
+        passive = true;
         wakeupeepyheadTimer = -1;
         setHealth(getMaxHealth());
+        setNoAi(true);
     }
 }

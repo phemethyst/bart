@@ -22,6 +22,7 @@ import net.neoforged.neoforge.common.data.DatapackBuiltinEntriesProvider;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
+import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingFallEvent;
 import net.neoforged.neoforge.event.entity.player.AttackEntityEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
@@ -67,12 +68,12 @@ public class ModEvents {
     }
 
     @SubscribeEvent
-    public static void imagineHittingBartCouldntBeMe(AttackEntityEvent event) {
-        if (!(event.getTarget() instanceof BartEntity)) {
+    public static void imagineHittingBartCouldntBeMe(LivingDamageEvent.Post event) {
+        if (!(event.getEntity() instanceof BartEntity)) {
             return;
         }
 
-        BartEntity bart = (BartEntity) event.getTarget();
+        BartEntity bart = (BartEntity) event.getEntity();
 
         if (bart.passive) {
             bart.passive = false;
