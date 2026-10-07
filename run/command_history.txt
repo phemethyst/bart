@@ -1,7 +1,4 @@
 /kill
-/gamerule keepInventory true
-/clear
-/kill
 /give @s netherite_sword[enchantments={sharpness:255}]
 /summon bart:bart
 /bart enableDeath @e
@@ -48,3 +45,6 @@
 /bart enableDeath @e
 /kill @e[type=bart:bart]
 /summon bart:bart
+/setworldspawn
+/attribute @s minecraft:generic.max_health base set 60
+/kill

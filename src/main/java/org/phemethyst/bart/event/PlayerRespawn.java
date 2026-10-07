@@ -1,6 +1,8 @@
 package org.phemethyst.bart.event;
 
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
@@ -18,6 +20,8 @@ public class PlayerRespawn {
     @SubscribeEvent
     public static void respawn(PlayerEvent.PlayerRespawnEvent event) {
         Player player = event.getEntity();
+
+        player.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 20, 255));
 
         player.handleEntityEvent((byte) 43);
         player.level().broadcastEntityEvent(player, (byte) 43);
