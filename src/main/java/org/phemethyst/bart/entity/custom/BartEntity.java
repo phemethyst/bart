@@ -2,6 +2,10 @@ package org.phemethyst.bart.entity.custom;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.ListTag;
+import net.minecraft.nbt.StringTag;
+import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerBossEvent;
@@ -27,6 +31,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.Nullable;
 import org.phemethyst.bart.Bart;
 import org.phemethyst.bart.buff.Buff;
@@ -110,7 +115,8 @@ public class BartEntity extends Monster implements MenuProvider {
                 .add(Attributes.FOLLOW_RANGE, 64)
                 .add(Attributes.ATTACK_DAMAGE, 4)
                 .add(Attributes.ATTACK_SPEED, 2)
-                .add(Attributes.KNOCKBACK_RESISTANCE, Bart.MAXINT);
+                .add(Attributes.KNOCKBACK_RESISTANCE, Bart.MAXINT)
+                .add(Attributes.FALL_DAMAGE_MULTIPLIER, 0);
     }
 
     private void setupAnimationStates() {
@@ -179,7 +185,9 @@ public class BartEntity extends Monster implements MenuProvider {
         }
 
         if (downedTimer == 0) {
-            this.level().broadcastEntityEvent(this, (byte) 43);
+            if (!this.level().isClientSide()) {
+                giveBuff();
+            }
         }
 
         if (wersobackTimer == 0) {
@@ -201,13 +209,20 @@ public class BartEntity extends Monster implements MenuProvider {
 
     public BartEntity(EntityType<? extends Monster> entityType, Level level) {
         super(entityType, level);
-        List<Buff> buffReg = new LinkedList<>(level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY).stream().toList());
+    }
 
-        for (Buff b : buffReg) {
-            if (b.getTarget() == Buff.Target.BART) {
-                buffList.add(b);
-            }
-        }
+    public List<Buff> getBuffs() {
+        return new LinkedList<>(buffList);
+    }
+
+    public void setBuffs(List<Buff> buffs) {
+        buffList = new LinkedList<>(buffs);
+
+        Bart.LOGGER.info(
+                "SETTING BART BUFFS {}: {}",
+                level().isClientSide() ? "CLIENT" : "SERVER",
+                buffs.stream().map(Buff::getName).toList()
+        );
     }
 
     @Override
@@ -234,33 +249,6 @@ public class BartEntity extends Monster implements MenuProvider {
         } else if (id == 42 && this.level().isClientSide()) {
             downedAnimState.stop();
             this.wersobackAnimState.start(this.tickCount);
-        } else if (id == 43 && this.level().isClientSide()) {
-            // Scrapped Bart trait, was useless lmao.
-            /* Buff hrt = new Buff("bart",
-                    "Nothing?",
-                    "\"Shops are 15% cheaper. No downsides!\"",
-                    "",
-                    "give @a minecraft:paper[minecraft:custom_name='{\\\"text\\\":\\\"1 Chakyldollar\\\"}']",
-                    "textures/upgrades/nothing.png"
-            ); */
-            Buff hrt;
-
-            if (buffList.isEmpty()) {
-                hrt = new Buff("bart",
-                        "Extinction",
-                        "\"Competition leads to winners.\"",
-                        "Bart can die.",
-                        "bart enableDeath @e",
-                        "textures/upgrades/extinction.png");
-            } else {
-                hrt = buffList.get(Mth.randomBetweenInclusive(RandomSource.create(), 0, buffList.size() - 1));
-
-                Bart.LOGGER.info("BEFORE REMOVE 3: {}", buffList.stream().map(Buff::getName).toList());
-
-                buffList.remove(hrt);
-            }
-
-            Minecraft.getInstance().setScreen(new BartScreen(Component.literal("Bart"), hrt));
         }
     }
 
@@ -278,6 +266,32 @@ public class BartEntity extends Monster implements MenuProvider {
 
         dashTarget = dir.scale(distance * 0.2);
         midDashTimer = 10;
+    }
+
+    public void giveBuff() {
+        Buff hrt;
+
+        if (buffList.isEmpty()) {
+            hrt = new Buff("bart",
+                    "Extinction",
+                    "\"Competition leads to winners.\"",
+                    "Bart can die.",
+                    "bart enableDeath @e",
+                    "textures/upgrades/extinction.png");
+        } else {
+            hrt = buffList.get(Mth.randomBetweenInclusive(RandomSource.create(), 0, buffList.size() - 1));
+
+            Bart.LOGGER.info("BEFORE REMOVE 3: {}", buffList.stream().map(Buff::getName).toList());
+
+            buffList.remove(hrt);
+        }
+
+        Buff.ListRecord temp = new Buff.ListRecord(new LinkedList<>());
+        temp.buffs().add(hrt);
+
+        Bart.LOGGER.info("TEMP BEFORE ADD: {}", temp.buffs());
+
+        PacketDistributor.sendToAllPlayers(temp);
     }
 
     @Override
@@ -301,6 +315,10 @@ public class BartEntity extends Monster implements MenuProvider {
     public void startSeenByPlayer(ServerPlayer serverPlayer) {
         super.startSeenByPlayer(serverPlayer);
         this.bossEvent.addPlayer(serverPlayer);
+
+        serverPlayer.connection.send(
+                new Buff.ListRecord(getBuffs())
+        );
     }
 
     @Override
@@ -320,6 +338,10 @@ public class BartEntity extends Monster implements MenuProvider {
         this.wersobackTimer = 40;
     }
 
+    public void removeBuff(Buff b) {
+        buffList.remove(b);
+    }
+
     @Override
     public @Nullable AbstractContainerMenu createMenu(int i, Inventory inventory, Player player) {
         return null;
@@ -330,5 +352,60 @@ public class BartEntity extends Monster implements MenuProvider {
         wakeupeepyheadTimer = -1;
         setHealth(getMaxHealth());
         setNoAi(true);
+    }
+
+    private void populateDefaultBuffs() {
+        Registry<Buff> registry = level().registryAccess()
+                .registryOrThrow(ModBuffs.BUFF_REGKEY);
+
+        for (Buff b : registry) {
+            if (b.getTarget() == Buff.Target.BART) {
+                buffList.add(b);
+            }
+        }
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+
+        Registry<Buff> registry = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
+
+        ListTag buffs = new ListTag();
+
+        for (Buff buff : buffList) {
+            ResourceLocation id = registry.getKey(buff);
+
+            if (id != null) {
+                buffs.add(StringTag.valueOf(id.toString()));
+            }
+        }
+
+        tag.put("Buffs", buffs);
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        buffList.clear();
+
+        Registry<Buff> registry = level().registryAccess().registryOrThrow(ModBuffs.BUFF_REGKEY);
+
+        if (!tag.contains("Buffs", Tag.TAG_LIST)) {
+            populateDefaultBuffs();
+            return;
+        }
+
+        ListTag buffs = tag.getList("Buffs", Tag.TAG_STRING);
+
+        for (int i = 0; i < buffs.size(); i++) {
+            ResourceLocation id = ResourceLocation.parse(buffs.getString(i));
+
+            Buff buff = registry.get(id);
+
+            if (buff != null) {
+                buffList.add(buff);
+            }
+        }
     }
 }

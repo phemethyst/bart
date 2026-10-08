@@ -153,7 +153,6 @@ public abstract class PlayerMixin extends LivingEntity implements MixinBullshit 
 
         this.entityData.set(BUFFS, bTemp);
 
-        // send packet to client
         PacketDistributor.sendToAllPlayers(bTemp);
     }
 
@@ -161,8 +160,6 @@ public abstract class PlayerMixin extends LivingEntity implements MixinBullshit 
         if (!level().isClientSide()) {
             return;
         }
-
-        // bT is the stuff we get from packet.
 
         if (bT == null || bT.length != 3 || bT[0] == null || bT[1] == null || bT[2] == null) {
             return;

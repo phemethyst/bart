@@ -1,6 +1,3 @@
-/kill
-/give @s netherite_sword[enchantments={sharpness:255}]
-/summon bart:bart
 /bart enableDeath @e
 /attribute @s minecraft:generic.attack_damage modifier add 2
 /attribute @s minecraft:generic.attack_damage base get
@@ -48,3 +45,6 @@
 /setworldspawn
 /attribute @s minecraft:generic.max_health base set 60
 /kill
+/summon bart:bart
+/effect give @s minecraft:regeneration infinite 255 true
+/effect give @s minecraft:strength infinite 255 true
