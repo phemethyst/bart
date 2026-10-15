@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// On the bright side, I bought you a teddy bear!
+
+Time: 2026-10-07 01:00:14
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.addToListeners(EventBus.java:272) ~[bus-8.0.5.jar%23138!/:?] {}
+-- Mod loading issue for: bart --
+Details:
+	Caused by 0: java.lang.RuntimeException: java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.event.entity.living.LivingDamageEvent. Register a listener to one of its subclasses instead!
+		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.lambda$inject$4(AutomaticEventSubscriber.java:112) ~[loader-4.0.44.jar%23134!/:4.0] {}
+		at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:49) ~[loader-4.0.44.jar%23134!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:134) ~[loader-4.0.44.jar%23134!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.44.jar%23134!/:4.0] {}
+		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.44.jar%23134!/:4.0] {}
+		at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+		at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+		at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+	Mod file: /home/andrea/projects/bart/build/classes/java/main/
+	Failure message: bart (bart) has failed to load correctly
+		java.lang.RuntimeException: java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.event.entity.living.LivingDamageEvent. Register a listener to one of its subclasses instead!
+	Mod version: 0.0.1
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.IllegalArgumentException: Cannot register listeners for abstract class net.neoforged.neoforge.event.entity.living.LivingDamageEvent. Register a listener to one of its subclasses instead!
+Stacktrace:
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.addToListeners(EventBus.java:272) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:267) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.registerListener(EventBus.java:186) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.register(EventBus.java:94) ~[bus-8.0.5.jar%23138!/:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.lambda$inject$4(AutomaticEventSubscriber.java:106) ~[loader-4.0.44.jar%23134!/:4.0] {}
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.AutomaticEventSubscriber.inject(AutomaticEventSubscriber.java:49) ~[loader-4.0.44.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:134) ~[loader-4.0.44.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.44.jar%23134!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.44.jar%23134!/:4.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 7.1.9-arch1-2
+	Java Version: 21.0.12.1, Arch Linux
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Arch Linux
+	Memory: 204647872 bytes (195 MiB) / 570425344 bytes (544 MiB) up to 4150263808 bytes (3958 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12400F
+	Identifier: Intel64 Family 6 Model 151 Stepping 5
+	Microarchitecture: Alder Lake
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: TU116 [GeForce GTX 1660 SUPER]
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MiB): 288.00
+	Graphics card #0 deviceId: 0x21c4
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 24296.35
+	Virtual memory used (MiB): 9829.61
+	Swap memory total (MiB): 16384.00
+	Swap memory used (MiB): 460.57
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 7749.57, total: 7912.36
+	Space in storage for workdir (MiB): available: 54004.06, total: 334485.34
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.44.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.44.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.44.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |bart                          |bart                          |0.0.1               |Manifest: NOSIGNATURE
+		neoforge-21.1.250.jar                             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.250.jar                             |NeoForge                      |neoforge                      |21.1.250            |Manifest: NOSIGNATURE
+	Crash Report UUID: 6913ebbe-fd6e-43cb-878e-a91fdb0f46fb
+	FML: 4.0.44
+	NeoForge: 21.1.250

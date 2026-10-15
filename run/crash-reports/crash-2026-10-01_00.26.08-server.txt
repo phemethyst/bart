@@ -1,0 +1,103 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 2026-10-01 00:26:08
+Description: Exception in server tick loop
+
+java.lang.AssertionError: null
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.player.Player.getItemBySlot(Player.java:2516) ~[neoforge-21.1.250.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bart.mixins.json:PlayerMixin from mod bart,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.getMainHandItem(LivingEntity.java:2023) ~[neoforge-21.1.250.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.phys.shapes.EntityCollisionContext.<init>(EntityCollisionContext.java:40) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.phys.shapes.CollisionContext.of(CollisionContext.java:14) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.BlockCollisions.<init>(BlockCollisions.java:35) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.CollisionGetter.lambda$getBlockCollisions$1(CollisionGetter.java:82) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.CollisionGetter.noCollision(CollisionGetter.java:47) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerPlayer.adjustSpawnLocation(ServerPlayer.java:331) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerPlayer.<init>(ServerPlayer.java:300) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.players.PlayerList.getPlayerForLogin(PlayerList.java:431) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.network.ServerConfigurationPacketListenerImpl.handleConfigurationFinished(ServerConfigurationPacketListenerImpl.java:187) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.configuration.ServerboundFinishConfigurationPacket.handle(ServerboundFinishConfigurationPacket.java:21) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.configuration.ServerboundFinishConfigurationPacket.handle(ServerboundFinishConfigurationPacket.java:8) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.PacketUtils.lambda$ensureRunningOnSameThread$0(PacketUtils.java:36) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.TickTask.run(TickTask.java:18) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.doRunTask(BlockableEventLoop.java:151) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.ReentrantBlockableEventLoop.doRunTask(ReentrantBlockableEventLoop.java:24) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:881) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.doRunTask(MinecraftServer.java:170) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.pollTask(BlockableEventLoop.java:122) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.pollTaskInternal(MinecraftServer.java:864) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.pollTask(MinecraftServer.java:858) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:135) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.managedBlock(MinecraftServer.java:830) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:835) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:718) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:267) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Linux (amd64) version 7.1.9-arch1-2
+	Java Version: 21.0.12.1, Arch Linux
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Arch Linux
+	Memory: 440276160 bytes (419 MiB) / 851443712 bytes (812 MiB) up to 4150263808 bytes (3958 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12400F
+	Identifier: Intel64 Family 6 Model 151 Stepping 5
+	Microarchitecture: Alder Lake
+	Frequency (GHz): -0.00
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: TU116 [GeForce GTX 1660 SUPER]
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MiB): 288.00
+	Graphics card #0 deviceId: 0x21c4
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MiB): 24296.35
+	Virtual memory used (MiB): 12374.93
+	Swap memory total (MiB): 16384.00
+	Swap memory used (MiB): 747.50
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 7811.54, total: 7912.36
+	Space in storage for workdir (MiB): available: 61415.04, total: 334485.34
+	JVM Flags: 0 total; 
+	Server Running: true
+	Player Count: 0 / 8; []
+	Active Data Packs: vanilla, mod_data, mod/neoforge, mod/bart
+	Available Data Packs: bundle, trade_rebalance, vanilla, mod/bart, mod/neoforge, mod_data
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -8126211932411727848
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'neoforge'; Server brand changed to 'neoforge'
+	Launched Version: 21.1.250
+	ModLauncher: 11.0.5+main.901c6ea8
+	ModLauncher launch target: forgeclientdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.44.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.44.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.44.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.5.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.5.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		main                                              |bart                          |bart                          |0.0.1               |Manifest: NOSIGNATURE
+		neoforge-21.1.250.jar                             |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.250.jar                             |NeoForge                      |neoforge                      |21.1.250            |Manifest: NOSIGNATURE
+	Crash Report UUID: a1eaf703-3207-4f4d-8b96-98e68f567586
+	FML: 4.0.44
+	NeoForge: 21.1.250

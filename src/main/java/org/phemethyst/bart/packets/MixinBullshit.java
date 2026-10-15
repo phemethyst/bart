@@ -1,6 +1,6 @@
 package org.phemethyst.bart.packets;
 
-import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buffold.Buff;
 
 import java.util.List;
 

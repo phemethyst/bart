@@ -5,7 +5,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
-import org.phemethyst.bart.buff.ModAttachments;
+import org.phemethyst.bart.buffold.ModAttachments;
 import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartRenderer;
 import org.phemethyst.bart.item.ModItems;

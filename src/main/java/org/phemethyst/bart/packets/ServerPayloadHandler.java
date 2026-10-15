@@ -5,7 +5,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import org.phemethyst.bart.Bart;
-import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buffold.Buff;
 import org.phemethyst.bart.entity.custom.BartEntity;
 
 import java.util.LinkedList;

@@ -9,8 +9,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.components.Button;
-import net.minecraft.world.phys.Vec2;
-import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buffold.Buff;
 
 import java.awt.*;
 

@@ -1,162 +1,67 @@
 package org.phemethyst.bart.buff;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.jpountz.util.ByteBufferUtils;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.codec.ByteBufCodecs;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import org.checkerframework.checker.signature.qual.Identifier;
-import org.phemethyst.bart.Bart;
+import net.minecraft.world.item.ItemStack;
 
-import java.util.List;
+// TODO:
+// Actually implement ts
+// Fix client-server shenanigans
 
 public class Buff {
     public enum Target {
-        PLAYER,
-        BART
+        BART,
+        PLAYER
     }
-    public String name;
-    public String altText;
-    public String effect;
-    public String command;
-    public String icon;
-    public Buff.Target target;
 
-    public static final Codec<Buff> CODEC = RecordCodecBuilder.create(instance ->
-            instance.group(
-                    Codec.STRING.fieldOf("target").forGetter(Buff::getTargetString),
-                    Codec.STRING.fieldOf("name").forGetter(Buff::getName),
-                    Codec.STRING.fieldOf("altText").forGetter(Buff::getAltText),
-                    Codec.STRING.fieldOf("effect").forGetter(Buff::getEffect),
-                    Codec.STRING.fieldOf("command").forGetter(Buff::getCommand),
-                    Codec.STRING.fieldOf("icon").forGetter(Buff::getIcon)
-            ).apply(instance, Buff::new));
+    // What to do when this buff is chosen?
+    public enum ActionType {
+        ATTRIBUTE,
+        ITEM,
+        COMMAND
+    }
 
-    public static final StreamCodec<RegistryFriendlyByteBuf, Buff> STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getTargetString,
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getName,
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getAltText,
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getEffect,
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getCommand,
-            ByteBufCodecs.STRING_UTF8,
-            Buff::getIcon,
-            Buff::new
-    );
-
-    @Override
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Buff)) {
-            return false;
+    public class Action {
+        public enum AttribValueModType {
+            ADD,
+            MULT_BASE,
+            MULT_TOTAL
         }
 
-        return ((Buff)obj).getName().equals(this.getName());
-    }
+        public ActionType type;
 
+        // Attribute-specific
+        public String attributeID;
+        public float attributeValue;
+        public AttribValueModType modifyType;
 
-    public BuffRecord record() {
-        return new BuffRecord(this.getTargetString(), this.name, this.altText, this.effect, this.command, this.icon);
-    }
+        // Item
+        public ItemStack item;
 
-    public record ListRecord(List<Buff> buffs) implements CustomPacketPayload {
-        @Override
-        public Type<? extends CustomPacketPayload> type() {
-            return TYPE;
+        // Command
+        public String command;
+
+        public Action(String attribID, float attribValue, AttribValueModType attribModType) {
+            this.type = ActionType.ATTRIBUTE;
+            this.attributeID = attribID;
+            this.attributeValue = attribValue;
+            this.modifyType = attribModType;
         }
 
-        public static final CustomPacketPayload.Type<ListRecord> TYPE =
-                new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(Bart.MODID, "buff_record"));
-
-        public static final StreamCodec<? super RegistryFriendlyByteBuf, Buff.ListRecord> STREAM_CODEC = Buff.STREAM_CODEC.apply(ByteBufCodecs.list())
-                .map(ListRecord::new, ListRecord::buffs);
-    }
-
-    public record BuffRecord(String target, String name, String altText, String effect, String command, String icon) implements CustomPacketPayload {
-        public static final CustomPacketPayload.Type<BuffRecord> TYPE =
-                new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(Bart.MODID, "buffRecord"));
-
-        public static final StreamCodec<RegistryFriendlyByteBuf, BuffRecord> STREAM_CODEC = StreamCodec.composite(
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::target,
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::name,
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::altText,
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::effect,
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::command,
-                ByteBufCodecs.STRING_UTF8,
-                BuffRecord::icon,
-                BuffRecord::new
-        );
-
-        @Override
-        public CustomPacketPayload.Type<? extends CustomPacketPayload> type() {
-            return TYPE;
+        public Action(ItemStack item) {
+            this.type = ActionType.ITEM;
+            this.item = item;
         }
 
-        public Buff toBuff() {
-            return new Buff(target, name, altText, effect, command, icon);
+        public Action(String command) {
+            this.type = ActionType.COMMAND;
+            this.command = command;
         }
     }
 
-    public Buff (String target, String name, String altText, String effect, String command, String icon) {
-        this.name = name;
-        this.altText = altText;
-        this.effect = effect;
-        this.command = command;
-        this.icon = icon;
+    public Target target;
+    public Action[] action;
 
-        if (target.equals("bart")) {
-            this.target = Target.BART;
-        } else {
-            this.target = Target.PLAYER;
-        }
-    }
-
-    public Buff.Target getTarget() {
-        return target;
-    }
-
-    public String getTargetString() {
-        if (this.target == Target.BART) {
-            return "bart";
-        } else {
-            return "player";
-        }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAltText() {
-        return altText;
-    }
-
-    public String getEffect() {
-        return effect;
-    }
-
-    public String getCommand() {
-        return command;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public ResourceLocation getIconLoc() {
-        return ResourceLocation.fromNamespaceAndPath("bart", icon);
+    public Buff(Target t, Action[] a) {
+        this.target = t;
+        this.action = a;
     }
 }

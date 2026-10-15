@@ -1,6 +1,5 @@
 package org.phemethyst.bart.entity.custom;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -24,22 +23,19 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.monster.Zombie;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.Nullable;
 import org.phemethyst.bart.Bart;
-import org.phemethyst.bart.buff.Buff;
-import org.phemethyst.bart.buff.ModBuffs;
+import org.phemethyst.bart.buffold.Buff;
+import org.phemethyst.bart.buffold.ModBuffs;
 import org.phemethyst.bart.entity.goals.TelefraggerGoal;
 import org.phemethyst.bart.entity.goals.TransitionGoal;
 import org.phemethyst.bart.event.ASingularBoolean;
-import org.phemethyst.bart.ui.BartScreen;
 
 import java.util.LinkedList;
 import java.util.List;

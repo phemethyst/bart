@@ -1,0 +1,8 @@
+{
+  "target": "player",
+  "name": "Nothing?",
+  "altText": "\"No downsides!\"",
+  "effect": "No upsides, either...",
+  "command": "give @a waxed_weathered_cut_copper_stairs",
+  "icon": "textures/upgrades/nothing.png"
+}

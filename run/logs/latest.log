@@ -195,7 +195,7 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 [08Oct2026 21:02:37.920] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
 [08Oct2026 21:02:39.092] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 2
 [08Oct2026 21:02:39.153] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 41
-[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.buff.Buff@13033e7d]
+[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.buffold.Buff@13033e7d]
 [08Oct2026 21:02:39.912] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
 [08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow23
 [08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2

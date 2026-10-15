@@ -1,0 +1,28 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-10-06 16:24:30 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:savanna_plateau": "2026-10-07 17:01:10 +0200",
+      "minecraft:savanna": "2026-10-06 16:24:31 +0200"
+    },
+    "done": false
+  },
+  "minecraft:story/lava_bucket": {
+    "criteria": {
+      "lava_bucket": "2026-10-07 01:03:48 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_something": "2026-10-08 21:02:43 +0200"
+    },
+    "done": true
+  },
+  "DataVersion": 3955
+}
