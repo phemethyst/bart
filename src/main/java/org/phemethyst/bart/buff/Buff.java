@@ -1,5 +1,7 @@
 package org.phemethyst.bart.buff;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.world.item.ItemStack;
 
 // TODO:
@@ -17,44 +19,6 @@ public class Buff {
         ATTRIBUTE,
         ITEM,
         COMMAND
-    }
-
-    public class Action {
-        public enum AttribValueModType {
-            ADD,
-            MULT_BASE,
-            MULT_TOTAL
-        }
-
-        public ActionType type;
-
-        // Attribute-specific
-        public String attributeID;
-        public float attributeValue;
-        public AttribValueModType modifyType;
-
-        // Item
-        public ItemStack item;
-
-        // Command
-        public String command;
-
-        public Action(String attribID, float attribValue, AttribValueModType attribModType) {
-            this.type = ActionType.ATTRIBUTE;
-            this.attributeID = attribID;
-            this.attributeValue = attribValue;
-            this.modifyType = attribModType;
-        }
-
-        public Action(ItemStack item) {
-            this.type = ActionType.ITEM;
-            this.item = item;
-        }
-
-        public Action(String command) {
-            this.type = ActionType.COMMAND;
-            this.command = command;
-        }
     }
 
     public Target target;
