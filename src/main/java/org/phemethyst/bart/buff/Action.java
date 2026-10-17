@@ -6,6 +6,10 @@ import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+
+import java.util.List;
+import java.util.Objects;
 
 public class Action {
     public enum AttribValueModType {
@@ -27,61 +31,39 @@ public class Action {
     // Command
     public String command;
 
-    public Action(String attribID, float attribValue, AttribValueModType attribModType) {
-        this.type = Buff.ActionType.ATTRIBUTE;
+    public Action(String type, String attribID, float attribValue, String attribModType, ItemStack item, String command) {
+        this.type = Buff.getActionTypeFromString(type);
+
         this.attributeID = attribID;
         this.attributeValue = attribValue;
-        this.modifyType = attribModType;
-    }
-
-    public Action(String attribID, float attribValue, String attribModType) {
-        this(attribID, attribValue, Action.getAttributeModTypeByString(attribModType));
-    }
-
-    public Action(ItemStack item) {
-        this.type = Buff.ActionType.ITEM;
+        this.modifyType = Action.getAttributeModTypeByString(attribModType);
         this.item = item;
-    }
-
-    public Action(String command) {
-        this.type = Buff.ActionType.COMMAND;
         this.command = command;
     }
 
-    public static final Codec<Action> ATTRIB_CODEC = RecordCodecBuilder.create(instance ->
+    public static final Codec<Action> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
-                Codec.STRING.fieldOf("attribid").forGetter(Action::getAttributeID),
-                Codec.FLOAT.fieldOf("attribvalue").forGetter(Action::getAttributeValue),
-                Codec.STRING.fieldOf("attribmod").forGetter(Action::getAttributeModTypeString)
+                    Codec.STRING.fieldOf("type").forGetter(Action::getTypeString),
+                    Codec.STRING.optionalFieldOf("attribid", "").forGetter(Action::getAttributeID),
+                    Codec.FLOAT.optionalFieldOf("attribvalue", 0f).forGetter(Action::getAttributeValue),
+                    Codec.STRING.optionalFieldOf("attribmod", "add").forGetter(Action::getAttributeModTypeString),
+                    ItemStack.CODEC.optionalFieldOf("item", new ItemStack(Items.WAXED_WEATHERED_CUT_COPPER_STAIRS)).forGetter(Action::getItem),
+                    Codec.STRING.optionalFieldOf("command", "").forGetter(Action::getCommand)
             ).apply(instance, Action::new));
 
-    public static final Codec<Action> ITEM_CODEC = RecordCodecBuilder.create(instance ->
-            instance.group(
-                    ItemStack.CODEC.fieldOf("item").forGetter(Action::getItem)
-            ).apply(instance, Action::new));
+    public static final Codec<List<Action>> LIST_CODEC = CODEC.listOf();
 
-    public static final Codec<Action> COMMAND_CODEC = RecordCodecBuilder.create(instance ->
-            instance.group(
-                    Codec.STRING.fieldOf("command").forGetter(Action::getCommand)
-            ).apply(instance, Action::new));
-
-    public static final StreamCodec<RegistryFriendlyByteBuf, Action> ATTRIB_STREAM_CODEC = StreamCodec.composite(
+    public static final StreamCodec<RegistryFriendlyByteBuf, Action> STREAM_CODEC = StreamCodec.composite(
+            ByteBufCodecs.STRING_UTF8,
+            Action::getTypeString,
             ByteBufCodecs.STRING_UTF8,
             Action::getAttributeID,
             ByteBufCodecs.FLOAT,
             Action::getAttributeValue,
             ByteBufCodecs.STRING_UTF8,
             Action::getAttributeModTypeString,
-            Action::new
-    );
-
-    public static final StreamCodec<RegistryFriendlyByteBuf, Action> ITEM_STREAM_CODEC = StreamCodec.composite(
-            ByteBufCodecs.fromCodec(ItemStack.CODEC),
+            ItemStack.STREAM_CODEC,
             Action::getItem,
-            Action::new
-    );
-
-    public static final StreamCodec<RegistryFriendlyByteBuf, Action> COMMAND_STREAM_CODEC = StreamCodec.composite(
             ByteBufCodecs.STRING_UTF8,
             Action::getCommand,
             Action::new
@@ -157,5 +139,20 @@ public class Action {
 
     public String getCommand() {
         return command;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Action)) {
+            return false;
+        }
+
+        Action b = (Action)obj;
+
+        return Objects.equals(this.attributeID, b.attributeID) &&
+                this.attributeValue == b.attributeValue &&
+                this.modifyType == b.modifyType &&
+                this.item == b.item &&
+                Objects.equals(this.command, b.command);
     }
 }
