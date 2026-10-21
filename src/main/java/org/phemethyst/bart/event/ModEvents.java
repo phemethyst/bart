@@ -20,13 +20,14 @@ import net.neoforged.neoforge.network.handling.DirectionalPayloadHandler;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.registries.DataPackRegistryEvent;
 import org.phemethyst.bart.Bart;
-import org.phemethyst.bart.buffold.Buff;
-import org.phemethyst.bart.buffold.ModAttachments;
-import org.phemethyst.bart.buffold.ModBuffs;
+import org.phemethyst.bart.buff.Buff;
+import org.phemethyst.bart.buff.BuffRegistry;
+import org.phemethyst.bart.buff.SerializersAndAttachments;
 import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartModel;
 import org.phemethyst.bart.entity.custom.BartEntity;
 import org.phemethyst.bart.item.ModItems;
+import org.phemethyst.bart.network.BuffPacket;
 import org.phemethyst.bart.packets.ClientPayloadHandler;
 import org.phemethyst.bart.packets.ServerPayloadHandler;
 
@@ -160,15 +161,15 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void registerDatapackRegistries(DataPackRegistryEvent.NewRegistry event) {
-        event.dataPackRegistry(ModBuffs.BUFF_REGKEY, Buff.CODEC, Buff.CODEC);
+        event.dataPackRegistry(BuffRegistry.BUFF_REGKEY, Buff.CODEC, Buff.CODEC);
     }
 
     @SubscribeEvent
-    public static void getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(final RegisterPayloadHandlersEvent event) {
+    public static void registerPackets(final RegisterPayloadHandlersEvent event) {
         final PayloadRegistrar registrar = event.registrar("1");
         registrar.playBidirectional(
-                Buff.ListRecord.TYPE,
-                ModAttachments.ENTITY_SERIALIZER.codec(),
+                BuffPacket.TYPE,
+                SerializersAndAttachments.PACKET_SERIALIZER.codec(),
                 new DirectionalPayloadHandler<>(
                         ClientPayloadHandler::handleDataOnMain,
                         ServerPayloadHandler::handleDataOnMain

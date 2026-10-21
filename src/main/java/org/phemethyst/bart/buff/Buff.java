@@ -6,16 +6,12 @@ package org.phemethyst.bart.buff;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
-import org.phemethyst.bart.Bart;
-
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
 import java.util.List;
 
-public class Buff implements CustomPacketPayload {
-    public static final CustomPacketPayload.Type<Buff> TYPE =
-            new CustomPacketPayload.Type<>(ResourceLocation.fromNamespaceAndPath(Bart.MODID, "buff"));
-
+public class Buff {
     public enum Target {
         BART,
         PLAYER
@@ -46,6 +42,16 @@ public class Buff implements CustomPacketPayload {
                     Action.LIST_CODEC.fieldOf("actions").forGetter(Buff::getActions)
             ).apply(instance, Buff::new));
 
+    public static final Codec<List<Buff>> LIST_CODEC = CODEC.listOf();
+
+    public static final StreamCodec<RegistryFriendlyByteBuf, Buff> STREAM_CODEC = StreamCodec.composite(
+            ByteBufCodecs.STRING_UTF8,
+            Buff::getTargetString,
+            Action.STREAM_CODEC.apply(ByteBufCodecs.list()),
+            Buff::getActions,
+            Buff::new
+    );
+
     @Override
     public boolean equals(Object obj) {
         if (!(obj instanceof Buff)) {
@@ -53,11 +59,6 @@ public class Buff implements CustomPacketPayload {
         }
 
         return this.action == ((Buff) obj).action;
-    }
-
-    @Override
-    public Type<? extends CustomPacketPayload> type() {
-        return TYPE;
     }
 
     public String getTargetString() {

@@ -1,0 +1,13 @@
+{
+  "target": "player",
+  "action": [
+    {
+      "type": "command",
+      "command": "title @a title \"Shops are 15% cheaper!\""
+    },
+    {
+      "type": "command",
+      "command": "title @a subtitle \"Oh wait, there are no shops...\""
+    }
+  ]
+}

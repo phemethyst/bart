@@ -5,6 +5,8 @@ import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import org.phemethyst.bart.buff.BuffRegistry;
+import org.phemethyst.bart.buff.SerializersAndAttachments;
 import org.phemethyst.bart.buffold.ModAttachments;
 import org.phemethyst.bart.entity.ModEntities;
 import org.phemethyst.bart.entity.client.BartRenderer;
@@ -18,6 +20,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+
 @Mod(Bart.MODID)
 public class Bart {
     public static final String MODID = "bart";
@@ -30,12 +33,13 @@ public class Bart {
 
         ModItems.register(modEventBus);
         ModEntities.register(modEventBus);
-        ModAttachments.register(modEventBus);
+
+        SerializersAndAttachments.register(modEventBus);
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Bart welcomes you.");
+        LOGGER.info("HEY GUYS WELCOME TO MY MINECRAFT LETSPLAY WHERE TODAY I'LL BE KILLING PHEMETHYST!!!!!!");
     }
 
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
