@@ -5,7 +5,7 @@ Time: 2026-09-20 21:22:48
 Description: Ticking entity
 
 java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.LivingEntity.getLookAngle()" because "this.target" is null
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.goals.TelefraggerGoal.start(TelefraggerGoal.java:55) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.goals.TelefraggerGoal.start(TelefraggerGoal.java:55) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.WrappedGoal.start(WrappedGoal.java:46) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:108) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:792) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
@@ -14,7 +14,7 @@ java.lang.NullPointerException: Cannot invoke "net.minecraft.world.entity.Living
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.monster.Monster.aiStep(Monster.java:44) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2493) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.tick(Mob.java:357) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.custom.BartEntity.tick(BartEntity.java:80) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.custom.BartEntity.tick(BartEntity.java:80) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:777) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.Level.guardEntityTick(Level.java:610) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:423) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
@@ -34,7 +34,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Server thread
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.goals.TelefraggerGoal.start(TelefraggerGoal.java:55) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.goals.TelefraggerGoal.start(TelefraggerGoal.java:55) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.WrappedGoal.start(WrappedGoal.java:46) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.ai.goal.GoalSelector.tick(GoalSelector.java:108) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.serverAiStep(Mob.java:792) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
@@ -43,14 +43,14 @@ Stacktrace:
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.monster.Monster.aiStep(Monster.java:44) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.LivingEntity.tick(LivingEntity.java:2493) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.entity.Mob.tick(Mob.java:357) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.custom.BartEntity.tick(BartEntity.java:80) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.custom.BartEntity.tick(BartEntity.java:80) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:777) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.Level.guardEntityTick(Level.java:610) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.server.level.ServerLevel.lambda$tick$2(ServerLevel.java:423) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.world.level.entity.EntityTickList.forEach(EntityTickList.java:53) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 -- Entity being ticked --
 Details:
-	Entity Type: bart:bart (org.phemethyst.bart.entity.custom.BartEntity)
+	Entity Type: bart:bart (org.phemethyst.bart.gutted.entity.custom.BartEntity)
 	Entity ID: 3
 	Entity Name: Bart
 	Entity's Exact location: 46.23, -60.00, 21.85

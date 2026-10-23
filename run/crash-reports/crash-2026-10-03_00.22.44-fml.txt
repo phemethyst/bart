@@ -24,7 +24,7 @@ Details:
 	Exception message: java.lang.IllegalStateException: copyOnDeath requires a serializer
 Stacktrace:
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.attachment.AttachmentType$Builder.copyOnDeath(AttachmentType.java:226) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.buffold.ModAttachments.lambda$static$1(ModAttachments.java:18) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.buffold.ModAttachments.lambda$static$1(ModAttachments.java:18) ~[%23179!/:?] {re:mixin,re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:215) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}

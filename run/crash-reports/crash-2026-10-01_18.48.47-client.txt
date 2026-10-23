@@ -4,8 +4,8 @@
 Time: 2026-10-01 18:48:47
 Description: mouseClicked event handler
 
-java.lang.NullPointerException: Cannot invoke "org.phemethyst.bart.buffold.Buff.getCommand()" because "this.buff1" is null
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.lambda$init$0(PlayerScreen.java:44) ~[%23179!/:?] {re:mixin,re:classloading}
+java.lang.NullPointerException: Cannot invoke "org.phemethyst.bart.gutted.buffold.Buff.getCommand()" because "this.buff1" is null
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.lambda$init$0(PlayerScreen.java:44) ~[%23179!/:?] {re:mixin,re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.Button.onPress(Button.java:41) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractButton.onClick(AbstractButton.java:47) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.extensions.IAbstractWidgetExtension.onClick(IAbstractWidgetExtension.java:36) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
@@ -50,7 +50,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.lambda$init$0(PlayerScreen.java:44) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.lambda$init$0(PlayerScreen.java:44) ~[%23179!/:?] {re:mixin,re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.Button.onPress(Button.java:41) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.components.AbstractButton.onClick(AbstractButton.java:47) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.extensions.IAbstractWidgetExtension.onClick(IAbstractWidgetExtension.java:36) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
@@ -67,7 +67,7 @@ Stacktrace:
 	at MC-BOOTSTRAP/org.lwjgl.glfw@3.3.3+5/org.lwjgl.glfw.GLFW.glfwWaitEventsTimeout(GLFW.java:3509) ~[lwjgl-glfw-3.3.3.jar%23160!/:build 5] {}
 -- Affected screen --
 Details:
-	Screen name: org.phemethyst.bart.ui.PlayerScreen
+	Screen name: org.phemethyst.bart.gutted.ui.PlayerScreen
 Stacktrace:
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:471) ~[neoforge-21.1.250.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.MouseHandler.onPress(MouseHandler.java:100) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:runtimedistcleaner:A}

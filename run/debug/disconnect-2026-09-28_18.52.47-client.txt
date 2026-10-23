@@ -5,7 +5,7 @@ Time: 2026-09-28 18:52:47
 Description: Packet handling error
 
 java.lang.NullPointerException: Cannot invoke "net.minecraft.resources.ResourceLocation.getPath()" because the return value of "net.minecraft.core.Registry.getKey(Object)" is null
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.custom.BartEntity.handleEntityEvent(BartEntity.java:224) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.custom.BartEntity.handleEntityEvent(BartEntity.java:224) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.multiplayer.ClientPacketListener.handleEntityEvent(ClientPacketListener.java:1121) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.game.ClientboundEntityEventPacket.handle(ClientboundEntityEventPacket.java:45) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.network.protocol.game.ClientboundEntityEventPacket.handle(ClientboundEntityEventPacket.java:11) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
@@ -43,7 +43,7 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.entity.custom.BartEntity.handleEntityEvent(BartEntity.java:224) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.entity.custom.BartEntity.handleEntityEvent(BartEntity.java:224) ~[%23179!/:?] {re:classloading}
 -- Incoming Packet --
 Details:
 	Type: clientbound/minecraft:entity_event

@@ -4,9 +4,9 @@
 Time: 2026-10-03 01:01:10
 Description: Rendering screen
 
-java.lang.NullPointerException: Cannot invoke "org.phemethyst.bart.buffold.Buff.getIconLoc()" because "this.buff1" is null
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.renderImages(PlayerScreen.java:84) ~[%23179!/:?] {re:mixin,re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.render(PlayerScreen.java:137) ~[%23179!/:?] {re:mixin,re:classloading}
+java.lang.NullPointerException: Cannot invoke "org.phemethyst.bart.gutted.buffold.Buff.getIconLoc()" because "this.buff1" is null
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.renderImages(PlayerScreen.java:84) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.render(PlayerScreen.java:137) ~[%23179!/:?] {re:mixin,re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:112) ~[neoforge-21.1.250.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.ClientHooks.drawScreenInternal(ClientHooks.java:429) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.ClientHooks.drawScreen(ClientHooks.java:423) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
@@ -40,14 +40,14 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.renderImages(PlayerScreen.java:84) ~[%23179!/:?] {re:mixin,re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.ui.PlayerScreen.render(PlayerScreen.java:137) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.renderImages(PlayerScreen.java:84) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.ui.PlayerScreen.render(PlayerScreen.java:137) ~[%23179!/:?] {re:mixin,re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:112) ~[neoforge-21.1.250.jar%23177!/:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.ClientHooks.drawScreenInternal(ClientHooks.java:429) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.client.ClientHooks.drawScreen(ClientHooks.java:423) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 -- Screen render details --
 Details:
-	Screen name: org.phemethyst.bart.ui.PlayerScreen
+	Screen name: org.phemethyst.bart.gutted.ui.PlayerScreen
 	Mouse location: Scaled: (504, 206). Absolute: (1008.000000, 413.000000)
 	Screen size: Scaled: (938, 498). Absolute: (1876, 996). Scale factor of 2.000000
 Stacktrace:

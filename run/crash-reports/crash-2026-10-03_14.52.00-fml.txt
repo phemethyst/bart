@@ -17,7 +17,7 @@ Stacktrace:
 -- Mod loading issue for: bart --
 Details:
 	Caused by 0: java.lang.ExceptionInInitializerError
-		at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(ModEvents.java:181) ~[%23179!/:?] {re:classloading}
+		at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(ModEvents.java:181) ~[%23179!/:?] {re:classloading}
 		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23138!/:?] {}
 		at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%23138!/:?] {}
 		at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.44.jar%23134!/:4.0] {}
@@ -64,8 +64,8 @@ Stacktrace:
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.resources.ResourceLocation.assertValidPath(ResourceLocation.java:311) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.resources.ResourceLocation.createUntrusted(ResourceLocation.java:58) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.resources.ResourceLocation.fromNamespaceAndPath(ResourceLocation.java:62) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading,pl:accesstransformer:B,re:mixin,pl:accesstransformer:B}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.buffold.Buff$ListRecord.<clinit>(Buff.java:67) ~[%23179!/:?] {re:mixin,re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(ModEvents.java:181) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.buffold.Buff$ListRecord.<clinit>(Buff.java:67) ~[%23179!/:?] {re:mixin,re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(ModEvents.java:181) ~[%23179!/:?] {re:classloading}
 	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:360) ~[bus-8.0.5.jar%23138!/:?] {}
 	at MC-BOOTSTRAP/net.neoforged.bus/net.neoforged.bus.EventBus.post(EventBus.java:342) ~[bus-8.0.5.jar%23138!/:?] {}
 	at MC-BOOTSTRAP/fml_loader@4.0.44/net.neoforged.fml.ModContainer.acceptEvent(ModContainer.java:177) ~[loader-4.0.44.jar%23134!/:4.0] {}

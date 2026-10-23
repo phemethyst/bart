@@ -184,7 +184,7 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 [08Oct2026 21:02:34.481] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
 [08Oct2026 21:02:35.307] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
 [08Oct2026 21:02:35.613] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[08Oct2026 21:02:35.613] [Server thread/INFO] [org.phemethyst.bart.Bart/]: Bart welcomes you.
+[08Oct2026 21:02:35.613] [Server thread/INFO] [org.phemethyst.bart.gutted.Bart/]: Bart welcomes you.
 [08Oct2026 21:02:35.620] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
 [08Oct2026 21:02:35.621] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2 ms
 [08Oct2026 21:02:35.649] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
@@ -192,21 +192,21 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 [08Oct2026 21:02:37.708] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:9ec31a70] logged in with entity id 90 at (8.011724754661188, 119.0, 69.27464387387661)
 [08Oct2026 21:02:37.743] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
 [08Oct2026 21:02:37.899] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 9 advancements
-[08Oct2026 21:02:37.920] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
-[08Oct2026 21:02:39.092] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 2
-[08Oct2026 21:02:39.153] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 41
-[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.buffold.Buff@13033e7d]
-[08Oct2026 21:02:39.912] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
-[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow23
-[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
+[08Oct2026 21:02:37.920] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
+[08Oct2026 21:02:39.092] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 2
+[08Oct2026 21:02:39.153] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 41
+[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.gutted.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.gutted.buffold.Buff@13033e7d]
+[08Oct2026 21:02:39.912] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
+[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow23
+[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
 [08Oct2026 21:02:39.964] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
 [08Oct2026 21:02:39.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [08Oct2026 21:02:40.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
 [08Oct2026 21:02:40.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
-[08Oct2026 21:02:40.795] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 42
-[08Oct2026 21:02:43.532] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 3
+[08Oct2026 21:02:40.795] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 42
+[08Oct2026 21:02:43.532] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 3
 [08Oct2026 21:02:43.574] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 45 advancements
-[08Oct2026 21:02:44.542] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 60
+[08Oct2026 21:02:44.542] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 60
 [08Oct2026 21:02:44.714] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
 [08Oct2026 21:02:44.717] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [08Oct2026 21:02:44.747] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end

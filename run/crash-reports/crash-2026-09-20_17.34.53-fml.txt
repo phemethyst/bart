@@ -13,11 +13,11 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- Head --
 Thread: Render thread
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.item.ModArmorMaterials.register(ModArmorMaterials.java:35) ~[?:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.item.ModArmorMaterials.register(ModArmorMaterials.java:35) ~[?:?] {re:classloading}
 -- Mod loading issue for: bart --
 Details:
 	Caused by 0: java.lang.ExceptionInInitializerError
-		at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.item.ModItems.lambda$static$0(ModItems.java:14) ~[%23179!/:?] {re:classloading}
+		at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.item.ModItems.lambda$static$0(ModItems.java:14) ~[%23179!/:?] {re:classloading}
 		at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister$Items.lambda$register$0(DeferredRegister.java:515) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 		at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 		at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
@@ -46,9 +46,9 @@ Details:
 	Mod issues URL: <No issues URL found>
 	Exception message: java.lang.ClassCastException: class net.minecraft.sounds.SoundEvent cannot be cast to class net.minecraft.core.Holder (net.minecraft.sounds.SoundEvent and net.minecraft.core.Holder are in module minecraft@1.21.1 of loader 'TRANSFORMER' @4441d567)
 Stacktrace:
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.item.ModArmorMaterials.register(ModArmorMaterials.java:35) ~[%23179!/:?] {re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.item.ModArmorMaterials.<clinit>(ModArmorMaterials.java:22) ~[%23179!/:?] {re:classloading}
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.item.ModItems.lambda$static$0(ModItems.java:14) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.item.ModArmorMaterials.register(ModArmorMaterials.java:35) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.item.ModArmorMaterials.<clinit>(ModArmorMaterials.java:22) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.item.ModItems.lambda$static$0(ModItems.java:14) ~[%23179!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister$Items.lambda$register$0(DeferredRegister.java:515) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$register$1(DeferredRegister.java:234) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}
 	at TRANSFORMER/neoforge@21.1.250/net.neoforged.neoforge.registries.DeferredRegister.lambda$addEntries$2(DeferredRegister.java:375) ~[neoforge-21.1.250.jar%23178!/:?] {re:classloading}

@@ -1467,23 +1467,23 @@
 [08Oct2026 21:02:23.019] [Render thread/DEBUG] [oshi.util.FileUtil/]: Reading file /proc/self/auxv
 [08Oct2026 21:02:23.046] [Render thread/DEBUG] [net.neoforged.fml.ModWorkManager/LOADING]: Using 12 threads for parallel mod-loading
 [08Oct2026 21:02:23.052] [Render thread/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [net.neoforged.neoforge.common.NeoForgeMod, net.neoforged.neoforge.client.ClientNeoForgeMod]
-[08Oct2026 21:02:23.055] [Render thread/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [org.phemethyst.bart.Bart]
+[08Oct2026 21:02:23.055] [Render thread/DEBUG] [net.neoforged.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for [org.phemethyst.bart.gutted.Bart]
 [08Oct2026 21:02:23.065] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for bart
 [08Oct2026 21:02:23.065] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found NeoForge version 21.1.250
 [08Oct2026 21:02:23.065] [modloading-worker-0/DEBUG] [net.neoforged.neoforge.internal.versions.neoforge.NeoForgeVersion/CORE]: Found FML version 4.0.44
 [08Oct2026 21:02:23.065] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 21.1.250, for MC 1.21.1
-[08Oct2026 21:02:23.065] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.event.PlayerRespawn for @SubscribeEvent-annotated methods
+[08Oct2026 21:02:23.065] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.gutted.event.PlayerRespawn for @SubscribeEvent-annotated methods
 [08Oct2026 21:02:23.067] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/]: Subscribing @EventBusSubscriber class Lorg/phemethyst/bart/event/PlayerRespawn; to the game event bus
-[08Oct2026 21:02:23.068] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.event.ModEvents for @SubscribeEvent-annotated methods
+[08Oct2026 21:02:23.068] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.gutted.event.ModEvents for @SubscribeEvent-annotated methods
 [08Oct2026 21:02:23.069] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Found mix of game bus and mod bus listeners in @EventBusSubscriber class Lorg/phemethyst/bart/event/ModEvents;, registering them separately
-[08Oct2026 21:02:23.069] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.registerDatapackRegistries(net.neoforged.neoforge.registries.DataPackRegistryEvent$NewRegistry) to the event bus of mod bart
-[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.registerLayers(net.neoforged.neoforge.client.event.EntityRenderersEvent$RegisterLayerDefinitions) to the event bus of mod bart
-[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.registerAttributes(net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent) to the event bus of mod bart
-[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent) to the event bus of mod bart
-[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.sudormrf(net.neoforged.neoforge.event.RegisterCommandsEvent) to the game event bus
-[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.onLivingFall(net.neoforged.neoforge.event.entity.living.LivingFallEvent) to the game event bus
-[08Oct2026 21:02:23.071] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.event.ModEvents.imagineHittingBartCouldntBeMe(net.neoforged.neoforge.event.entity.living.LivingDamageEvent$Post) to the game event bus
-[08Oct2026 21:02:23.071] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.Bart$ClientModEvents for @SubscribeEvent-annotated methods
+[08Oct2026 21:02:23.069] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.registerDatapackRegistries(net.neoforged.neoforge.registries.DataPackRegistryEvent$NewRegistry) to the event bus of mod bart
+[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.registerLayers(net.neoforged.neoforge.client.event.EntityRenderersEvent$RegisterLayerDefinitions) to the event bus of mod bart
+[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.registerAttributes(net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent) to the event bus of mod bart
+[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.getUpThereAndTeachThemInsteadOfHandingThemAFuckingPacket(net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent) to the event bus of mod bart
+[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.sudormrf(net.neoforged.neoforge.event.RegisterCommandsEvent) to the game event bus
+[08Oct2026 21:02:23.070] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.onLivingFall(net.neoforged.neoforge.event.entity.living.LivingFallEvent) to the game event bus
+[08Oct2026 21:02:23.071] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Subscribing method public static void org.phemethyst.bart.gutted.event.ModEvents.imagineHittingBartCouldntBeMe(net.neoforged.neoforge.event.entity.living.LivingDamageEvent$Post) to the game event bus
+[08Oct2026 21:02:23.071] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Scanning class org.phemethyst.bart.gutted.Bart$ClientModEvents for @SubscribeEvent-annotated methods
 [08Oct2026 21:02:23.071] [modloading-worker-0/DEBUG] [net.neoforged.fml.javafmlmod.AutomaticEventSubscriber/]: Subscribing @EventBusSubscriber class Lorg/phemethyst/bart/Bart$ClientModEvents; to the mod event bus of mod bart
 [08Oct2026 21:02:23.079] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-client.toml for neoforge tracking
 [08Oct2026 21:02:23.079] [modloading-worker-0/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Config file neoforge-server.toml for neoforge tracking
@@ -1702,7 +1702,7 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 [08Oct2026 21:02:34.565] [Server thread/DEBUG] [net.neoforged.fml.config.ConfigTracker/CONFIG]: Watching TOML config file /home/andrea/projects/bart/run/config/neoforge-server.toml for changes
 [08Oct2026 21:02:35.307] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
 [08Oct2026 21:02:35.613] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
-[08Oct2026 21:02:35.613] [Server thread/INFO] [org.phemethyst.bart.Bart/]: Bart welcomes you.
+[08Oct2026 21:02:35.613] [Server thread/INFO] [org.phemethyst.bart.gutted.Bart/]: Bart welcomes you.
 [08Oct2026 21:02:35.620] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 10%
 [08Oct2026 21:02:35.621] [progressListener/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2 ms
 [08Oct2026 21:02:35.649] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
@@ -1729,22 +1729,22 @@ Native library (linux-x86-64/libflite.so) not found in resource path (/home/andr
 [08Oct2026 21:02:37.708] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:9ec31a70] logged in with entity id 90 at (8.011724754661188, 119.0, 69.27464387387661)
 [08Oct2026 21:02:37.743] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
 [08Oct2026 21:02:37.899] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 9 advancements
-[08Oct2026 21:02:37.920] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
-[08Oct2026 21:02:39.092] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 2
-[08Oct2026 21:02:39.153] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 41
-[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.buffold.Buff@13033e7d]
-[08Oct2026 21:02:39.912] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
-[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow23
-[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.Bart/]: meow2
+[08Oct2026 21:02:37.920] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
+[08Oct2026 21:02:39.092] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 2
+[08Oct2026 21:02:39.153] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 41
+[08Oct2026 21:02:39.897] [Server thread/INFO] [org.phemethyst.bart.gutted.Bart/]: TEMP BEFORE ADD: [org.phemethyst.bart.gutted.buffold.Buff@13033e7d]
+[08Oct2026 21:02:39.912] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
+[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow23
+[08Oct2026 21:02:39.913] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: meow2
 [08Oct2026 21:02:39.964] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
 [08Oct2026 21:02:39.980] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [08Oct2026 21:02:40.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
 [08Oct2026 21:02:40.011] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
 [08Oct2026 21:02:40.011] [Server thread/DEBUG] [net.neoforged.neoforge.common.CommonHooks/WP]: Gathered mod list to write to world save New World
-[08Oct2026 21:02:40.795] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 42
-[08Oct2026 21:02:43.532] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 3
+[08Oct2026 21:02:40.795] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 42
+[08Oct2026 21:02:43.532] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 3
 [08Oct2026 21:02:43.574] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 45 advancements
-[08Oct2026 21:02:44.542] [Render thread/INFO] [org.phemethyst.bart.Bart/]: estrogen: 60
+[08Oct2026 21:02:44.542] [Render thread/INFO] [org.phemethyst.bart.gutted.Bart/]: estrogen: 60
 [08Oct2026 21:02:44.714] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
 [08Oct2026 21:02:44.717] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
 [08Oct2026 21:02:44.747] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end

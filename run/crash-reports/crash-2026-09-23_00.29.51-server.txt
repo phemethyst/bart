@@ -5,7 +5,7 @@ Time: 2026-09-23 00:29:51
 Description: Exception in server tick loop
 
 java.lang.AssertionError: null
-	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.event.ModEvents.lambda$sudormrf$0(ModEvents.java:64) ~[%23179!/:?] {re:classloading}
+	at TRANSFORMER/bart@0.0.1/org.phemethyst.bart.gutted.event.ModEvents.lambda$sudormrf$0(ModEvents.java:64) ~[%23179!/:?] {re:classloading}
 	at MC-BOOTSTRAP/brigadier@1.3.10/com.mojang.brigadier.context.ContextChain.runExecutable(ContextChain.java:73) ~[brigadier-1.3.10.jar%23106!/:?] {}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:29) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
 	at TRANSFORMER/minecraft@1.21.1/net.minecraft.commands.execution.tasks.ExecuteCommand.execute(ExecuteCommand.java:13) ~[neoforge-21.1.250.jar%23177!/:?] {re:classloading}
